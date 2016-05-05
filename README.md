@@ -28,6 +28,11 @@ npm install
 ## Source Code
 所有 source code 都位於 ``app/`` 下  
 
+#### 文案
+* API 撈
+* ``app/html/copy/``
+* ``app/js/json/``
+
 #### Pages
 ``app/*.html`` 會被視為各頁面，i.e.  
 ``app/index.html`` -> ``build/index.html``  
@@ -42,7 +47,6 @@ include 方式如
 	__@w@include('./html/path_to_source.html')
 </div>
 ```
-非 API 撈的網頁文案放  ``app/html/copy/``  
 
 #### scss
 所有 ``app/scss/*.scss`` 都會被 build 成 ``build/*.css``  
@@ -52,6 +56,21 @@ include 方式如
 所有 ``app/js/*.js`` 都會被 build 成 ``build/*.js``
 * react component: ``app/js/components/``
 * react state: ``app/js/states/``
+  * provide function to let UI to change the state/data
+  * component can regist callback triggering while state change
+  * no need relarive/absolute path to require module in this folder
+* API dataloader: ``app/js/dataloader``
+  * load data from server and format loaded data for front-end used
+  * no need relarive/absolute path to require module in this folder
 * library: ``app/js/lib/``
+  * third-part library
+  * self code library
+  * no need relarive/absolute path to require module in this folder
 * static json: ``app/js/json/``
+
+#### favicon
+``app/favicon*``
+
+#### image
+``app/images/**/*``
 
