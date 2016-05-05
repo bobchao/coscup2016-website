@@ -49,17 +49,17 @@ include 方式如
 ```
 
 #### scss
-所有 ``app/scss/*.scss`` 都會被 build 成 ``build/*.css``  
+所有 ``app/scss/*.scss`` 都會被 build 成 ``build/css/*.css``  
 要被 import 的 parital 放在 ``app/scss/**/*.scss``  
 
 #### javascript & react
-所有 ``app/js/*.js`` 都會被 build 成 ``build/*.js``
+所有 ``app/js/*.js`` 都會被 build 成 ``build/js/*.js``
 * react component: ``app/js/components/``
-* react state: ``app/js/states/``
+* react state: ``app/js/stores/``
   * provide function to let UI to change the state/data
   * component can regist callback triggering while state change
   * no need relarive/absolute path to require module in this folder
-* API dataloader: ``app/js/dataloader``
+* API dataloader: ``app/js/dataloaders/``
   * load data from server and format loaded data for front-end used
   * no need relarive/absolute path to require module in this folder
 * library: ``app/js/lib/``
