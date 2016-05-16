@@ -9,9 +9,7 @@ module.exports = {
 		dst: 'build/js',
 		watch: ['app/js/*.js','app/js/**/*'],
 		include_paths: [
-			'app/js/lib',
-			'app/js/dataloader',
-			'app/js/stores',
+			'app/js',
 			__dirname + '/../node_modules'
 		]
 	},
