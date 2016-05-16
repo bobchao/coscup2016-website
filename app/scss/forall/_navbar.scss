@@ -1,0 +1,29 @@
+// _main.scss will include this file
+
+nav[role="banner"] {
+	display         : block;
+	font-size       : $font_medium;
+	height          : 2em;
+	line-height     : 2em;
+	padding         : .5em;
+	background-color: $color_green_bg_hover;
+
+	strong {
+		font-size   : $font_medium;
+	}
+
+	ul {
+		display     : inline-block;
+		font-size   : $font_base;
+	}
+	li {
+		list-style  : none;
+		display     : inline-block;
+		padding     : 0 .3em;
+
+		a {
+			text-decoration: none;
+			color          : $color_gray;
+		} 
+	}
+}
