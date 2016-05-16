@@ -7,6 +7,9 @@ var browserify = require('gulp-browserify');
 var reactify   = require('reactify');
 
 gulp.task('js', function(){
+
+	process.env.NODE_ENV = 'production';
+	
 	return gulp.src(jsPath.src)
 		.pipe(browserify({
 			transform: ['reactify'],
