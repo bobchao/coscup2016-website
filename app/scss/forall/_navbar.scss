@@ -21,17 +21,18 @@ nav[role="banner"] {
 		display     : inline-block;
 		padding     : 0 .3em;
 		cursor      : pointer;
-		transition  : transform 500ms $time_quartic;
 
-		&.active {
-			transform      : translate3d(0,-10%,0);
-		}
-		&:hover {
-			transform      : translate3d(0,-10%,0);
-		}
 		a {
-			text-decoration: none;
+			border-bottom  : 1px solid transparent;
 			color          : $color_gray;
-		} 
+			text-decoration: none;
+			transition     : border-bottom 200ms;
+		}
+		&.active > a {
+			border-bottom  : 1px solid $color_gray;
+		}
+		&:hover  > a {
+			border-bottom  : 1px solid $color_gray;
+		}
 	}
 }
