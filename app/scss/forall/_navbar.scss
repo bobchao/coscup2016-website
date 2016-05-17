@@ -20,7 +20,15 @@ nav[role="banner"] {
 		list-style  : none;
 		display     : inline-block;
 		padding     : 0 .3em;
+		cursor      : pointer;
+		transition  : transform 500ms $time_quartic;
 
+		&.active {
+			transform      : translate3d(0,-10%,0);
+		}
+		&:hover {
+			transform      : translate3d(0,-10%,0);
+		}
 		a {
 			text-decoration: none;
 			color          : $color_gray;
