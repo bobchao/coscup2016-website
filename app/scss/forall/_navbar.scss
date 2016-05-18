@@ -2,6 +2,7 @@
 
 nav[role="banner"] {
 	display         : block;
+	position        : relative;
 	font-size       : $font_medium;
 	height          : 2em;
 	line-height     : 2em;
@@ -12,11 +13,19 @@ nav[role="banner"] {
 		font-size   : $font_medium;
 	}
 
-	ul {
+	& > ul {
 		display     : inline-block;
 		font-size   : $font_base;
+		z-index     : 999;
+
+		@include tablet() {
+			position       : absolute;
+			left           : 0;
+			top            : 100%;
+			width          : 100%;
+		}
 	}
-	li {
+	& > ul > li {
 		list-style  : none;
 		display     : inline-block;
 		padding     : 0 .3em;
@@ -33,6 +42,28 @@ nav[role="banner"] {
 		}
 		&:hover  > a {
 			border-bottom  : 1px solid $color_gray;
+		}
+
+		@include tablet() {
+			display        : block;
+			width          : 100%;
+			padding        : 0;
+			text-align     : center;
+			background     : $color_green_bg_hover;
+			transform      : translateX (-100%);
+			transform      : translate3d(-100%,0,0);
+			transition     : transform 800ms $time_quartic;
+		}
+	}
+}
+
+// rwd opened menu
+nav[role="bugar-button"].active ~ ul > li {
+	transform       : translateX (0); 
+	transform       : translate3d(0,0,0);
+	@for $i from 1 through 10 {
+		&:nth-child(#{$i}) {
+			transition-delay: $i * 50ms
 		}
 	}
 }

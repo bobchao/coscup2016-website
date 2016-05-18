@@ -4,6 +4,7 @@ var React     = require('react');
 
 // Include dependency
 var navbarDt  = require('json/navbar.json');
+var Bugar     = require('components/bugar.js');
 
 // Implement navbar banner
 var Links = React.createClass({
@@ -34,6 +35,7 @@ var Navbar = React.createClass({
 	render: function() {
 		return (
 			<nav role="banner">
+				<Bugar />
 				<strong>{"Logo"}</strong>
 				<Links lang="en" />
 			</nav>
