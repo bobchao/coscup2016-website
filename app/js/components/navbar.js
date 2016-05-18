@@ -5,17 +5,20 @@ var React     = require('react');
 // Include dependency
 var navbarDt  = require('json/navbar.json');
 var Bugar     = require('components/bugar.js');
+var langStore = require('stores/lang.js');
 
 // Implement navbar banner
 var LangSwitch = React.createClass({
     getInitialState: function() {
-        return {lang: 'zh'};
+        return {lang: langStore.getState()};
     },
     handleClickZH: function() {
         this.setState({lang: 'zh'});
+        langStore.setLang('zh');
     },
     handleClickEN: function() {
         this.setState({lang: 'en'});
+        langStore.setLang('en');
     },
     render: function() {
         var zhClass = 'unactive';
@@ -43,8 +46,18 @@ var LangSwitch = React.createClass({
 });
 
 var Links = React.createClass({
+    getInitialState: function() {
+        return {lang: langStore.getState()};
+    },
+    changeHandler: function() {
+        this.setState({lang: langStore.getState()});
+    },
+    componentDidMount: function() {
+        langStore.register(this.changeHandler);
+    },
     render: function() {
-        var lang = this.props.lang;
+        console.log(this.state.lang);
+        var lang = this.state.lang;
         var href = window.location.href.split("/").back();
         if( href === '' )
             href = 'index.html';
@@ -72,7 +85,7 @@ var Navbar = React.createClass({
             <nav role="banner">
                 <Bugar />
                 <img role="logo" src="images/logo.png" />
-                <Links lang="en" />
+                <Links />
                 <span role="vertical-anchor">{"1"}</span>
                 <LangSwitch />
                 <div role="clear-float"></div>
