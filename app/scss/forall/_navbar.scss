@@ -9,8 +9,15 @@ nav[role="banner"] {
     padding         : .5em;
     background-color: $color_green_bg_hover;
 
-    strong {
-        font-size   : $font_medium;
+    // Fixed vertical position of non text elements
+    span[role="vertical-anchor"] {
+        line-height       : 2em;
+        opacity           : 0;
+    }
+
+    img[role="logo"] {
+        height            : 1.2em;
+        vertical-align    : sub;
     }
 
     & > ul {

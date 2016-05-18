@@ -36,8 +36,9 @@ var Navbar = React.createClass({
         return (
             <nav role="banner">
                 <Bugar />
-                <strong>{"Logo"}</strong>
+                <img role="logo" src="images/logo.png" />
                 <Links lang="en" />
+                <span role="vertical-anchor">{"1"}</span>
             </nav>
         );
     }
