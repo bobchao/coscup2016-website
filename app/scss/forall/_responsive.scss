@@ -1,6 +1,6 @@
 // _main.scss will include this file
 @mixin tablet() {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         & {
             @content;
         }

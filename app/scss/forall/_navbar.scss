@@ -15,11 +15,13 @@ nav[role="banner"] {
         opacity           : 0;
     }
 
+    // Logo
     img[role="logo"] {
         height            : 1.2em;
         vertical-align    : sub;
     }
 
+    // Each pages' link
     & > ul {
         display     : inline-block;
         font-size   : $font_base;
@@ -60,6 +62,29 @@ nav[role="banner"] {
             transform      : translateX (-100%);
             transform      : translate3d(-100%,0,0);
             transition     : transform 800ms $time_quartic;
+        }
+    }
+
+    // Language switch button
+    nav[role="lang-switch"] {
+        position    : absolute;
+        right       : 0;
+        top         : 50%;
+        font-size   : $font_base;
+        transform   : translateY(-50%);
+
+        span {
+            font-size     : $font_base;
+            margin        : 0 1em 0 0;
+            border        : 0;
+            color         : $color_gray;
+            cursor        : pointer;
+            opacity       : .5;
+
+            &.active,
+            &:hover {
+                opacity   : 1;
+            }
         }
     }
 }
