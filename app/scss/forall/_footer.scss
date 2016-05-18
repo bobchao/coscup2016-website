@@ -1,0 +1,43 @@
+// _main.scss will include this file
+
+footer[role="banner"] {
+    padding         : 2em 1em;
+    background-color: $color_green_bg;
+
+    a {
+        opacity     : .5;
+
+        &:hover {
+            opacity : 1;
+        }
+    }
+
+    section[role="old-coscup-link"] {
+        text-align  : center;
+
+        a {
+            font-family    : $mono;
+            color          : $color_gray;
+            text-decoration: none;
+        }
+        span {
+            display        : inline-block; 
+            padding        : 0 .5em;
+            color          : $color_gray;
+            cursor         : default;
+        }
+    }
+
+    section[role="social-network-link"] {
+        text-align         : center;
+
+        a {
+            display        : inline-block;
+            margin-right   : 2em;
+            margin-top     : 1em;
+        }
+        img {
+            height         : 2em;
+        }
+    }
+}
