@@ -4,6 +4,7 @@ var ReactDOM  = require('react-dom');
 
 // Include dependency
 var Navbar = require('components/navbar.js');
+var Footer = require('components/footer.js');
 
 // Implement index page
 var Main = React.createClass({
@@ -11,6 +12,7 @@ var Main = React.createClass({
         return (
             <div>
                 <Navbar />
+                <Footer />
             </div>
         );
     }
