@@ -8,18 +8,19 @@
 
 // define common class or tag
 * {
-    margin: 0;
-    padding: 0;
-    font-family: $sans-serif;
+    margin          : 0;
+    padding         : 0;
+    font-family     : $sans-serif;
 }
 html {
-    width:  100%;
-    height: 100%;
+    width           : 100%;
+    height          : 100%;
+    background-color: $color_green_bg;
 }
 [role="relative"] {
-    position: relative;
+    position        : relative;
 }
 [role="clear-float"] {
-    display: block;
-    clear: both;
+    display         : block;
+    clear           : both;
 }

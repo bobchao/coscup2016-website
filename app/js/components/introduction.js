@@ -14,7 +14,7 @@ var Introduction = React.createClass({
     render: function() {
         var lang = this.state.lang;
         return (
-            <article className="Introduction">
+            <article role="self-introduction">
                 {textIntro[lang]}
             </article>
         );
