@@ -2,53 +2,53 @@
 
 // unactive/common state
 nav[role="bugar-button"] {
-	position      : relative;
-	display       : none;
-	font-size     : $font_medium;
-	width         : 1em;
-	height        : 1.2em;
-	line-height   : 2em;
-	margin        : 0 .5em 0 0;
-	cursor        : pointer;
-	vertical-align: sub;
+    position      : relative;
+    display       : none;
+    font-size     : $font_medium;
+    width         : 1em;
+    height        : 1.2em;
+    line-height   : 2em;
+    margin        : 0 .5em 0 0;
+    cursor        : pointer;
+    vertical-align: sub;
 
-	@include tablet() {
-		display   : inline-block;
-	}
+    @include tablet() {
+        display   : inline-block;
+    }
 
-	& > li {
-		position     : absolute;
-		display      : block;
-		width        : 100%;
-		border       : 1px solid $color_gray;
-		border-radius: 2px;
-		transition   : transform 500ms $time_quartic,
-		               top 500ms $time_quartic;
+    & > li {
+        position     : absolute;
+        display      : block;
+        width        : 100%;
+        border       : 1px solid $color_gray;
+        border-radius: 2px;
+        transition   : transform 500ms $time_quartic,
+                       top 500ms $time_quartic;
 
-		transform-origin: center center;
-	}
-	& > li[role="bugar-top-bread"] {
-		top          : 25%;
-	}
-	& > li[role="bugar-ham"] {
-		top          : 50%;
-	}
-	& > li[role="bugar-btn-bread"] {
-		top          : 75%;
-	}
+        transform-origin: center center;
+    }
+    & > li[role="bugar-top-bread"] {
+        top          : 25%;
+    }
+    & > li[role="bugar-ham"] {
+        top          : 50%;
+    }
+    & > li[role="bugar-btn-bread"] {
+        top          : 75%;
+    }
 }
 
 // active state
 nav[role="bugar-button"].active {
-	& > li[role="bugar-top-bread"] {
-		top          : 50%;
-		transform    : rotateZ(-45deg);
-	}
-	& > li[role="bugar-ham"] {
-		transform    : rotateZ(45deg);
-	}
-	& > li[role="bugar-btn-bread"] {
-		top          : 50%;
-		transform    : rotateZ(-45deg);
-	}
+    & > li[role="bugar-top-bread"] {
+        top          : 50%;
+        transform    : rotateZ(-45deg);
+    }
+    & > li[role="bugar-ham"] {
+        transform    : rotateZ(45deg);
+    }
+    & > li[role="bugar-btn-bread"] {
+        top          : 50%;
+        transform    : rotateZ(-45deg);
+    }
 }

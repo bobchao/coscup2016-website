@@ -8,17 +8,17 @@ var TransportMap = require('components/transportmap.js');
 
 // Implement index page
 var Main = React.createClass({
-	render: function() {
-		return (
-			<div>
-				<Navbar />
+    render: function() {
+        return (
+            <div>
+                <Navbar />
                 <TransportMap />
-			</div>
-		);
-	}
+            </div>
+        );
+    }
 });
 
 ReactDOM.render(
-	<Main />,
-	document.getElementById('react-root')
+    <Main />,
+    document.getElementById('react-root')
 )

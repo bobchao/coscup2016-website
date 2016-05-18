@@ -8,17 +8,17 @@ var Navbar = require('components/navbar.js');
 
 // Implement index page
 var Main = React.createClass({
-	render: function() {
-		return (
-			<div>
-				<Navbar />
-				<Intro  />
-			</div>
-		);
-	}
+    render: function() {
+        return (
+            <div>
+                <Navbar />
+                <Intro  />
+            </div>
+        );
+    }
 });
 
 ReactDOM.render(
-	<Main />,
-	document.getElementById('react-root')
+    <Main />,
+    document.getElementById('react-root')
 )
