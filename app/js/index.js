@@ -3,18 +3,20 @@ var React     = require('react');
 var ReactDOM  = require('react-dom');
 
 // Include dependency
-var Intro  = require('components/introduction.js');
-var Navbar = require('components/navbar.js');
-var Footer = require('components/footer.js');
+var Intro    = require('components/introduction.js');
+var Navbar   = require('components/navbar.js');
+var Sponsors = require('components/footer-sponsor.js');
+var Footer   = require('components/footer.js');
 
 // Implement index page
 var Main = React.createClass({
     render: function() {
         return (
             <div>
-                <Navbar />
-                <Intro  />
-                <Footer />
+                <Navbar   />
+                <Intro    />
+                <Sponsors />
+                <Footer   />
             </div>
         );
     }
