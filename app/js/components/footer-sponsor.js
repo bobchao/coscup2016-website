@@ -11,7 +11,9 @@ var Sponsor = React.createClass({
         var dt = this.props.dt;
         return (
             <div role="sponsor">
-                <img src={dt.logoUrl} />
+                <a href={dt.url} target="_blank">
+                    <img src={dt.logoUrl} />
+                </a>
                 <p>{dt.name}</p>
             </div>
         )
@@ -36,7 +38,7 @@ var SponsorClass = React.createClass({
         });
         return (
             <section role={this.props.role}>
-                <header>{data.className[lang]}</header>
+                <header role="sponsor-class">{data.className[lang]}</header>
                 {sponsors}
             </section>
         )
@@ -48,6 +50,7 @@ var FooterSponsor = React.createClass({
         return (
             <section role="footer-sponsor">
                 <SponsorClass role="golden" />
+                <SponsorClass role="silver" />
             </section>
         );
     }

@@ -12,19 +12,63 @@ var apiData = {
         "sponsors"  : [
             {
                 "key"        : 1,
-                "name"       : "test 1",
-                "logoUrl"   : "images/sponsors/test.png",
+                "name"       : "gold 1",
+                "url"        : "",
+                "logoUrl"    : "images/sponsors/test.png",
                 "description": ["p1", "p2"]
             },
             {
                 "key"        : 2,
-                "name"       : "test 2",
+                "name"       : "gold 2",
+                "url"        : "http://sitcon.camp/2015/",
                 "logoUrl"    : "images/sponsors/test.png",
                 "description": ["p1", "p2"]
             }
         ]
     },
-    "silver": {},
+    "silver": {
+        "className" : {
+            "en": "Silver",
+            "zh": "銀級"
+        },
+        "sponsors"  : [
+            {
+                "key"        : 1,
+                "name"       : "silver 1",
+                "url"        : "http://sitcon.camp/2015/",
+                "logoUrl"    : "images/sponsors/test.png",
+                "description": ["p1", "p2"]
+            },
+            {
+                "key"        : 2,
+                "name"       : "silver 2",
+                "url"        : "",
+                "logoUrl"    : "images/sponsors/test.png",
+                "description": ["p1", "p2"]
+            },
+            {
+                "key"        : 3,
+                "name"       : "silver 3",
+                "url"        : "",
+                "logoUrl"    : "images/sponsors/test.png",
+                "description": ["p1", "p2"]
+            },
+            {
+                "key"        : 4,
+                "name"       : "silver 4",
+                "url"        : "http://sitcon.camp/2015/",
+                "logoUrl"    : "images/sponsors/test.png",
+                "description": ["p1", "p2"]
+            },
+            {
+                "key"        : 5,
+                "name"       : "silver 5",
+                "url"        : "http://sitcon.camp/2015/",
+                "logoUrl"    : "images/sponsors/test.png",
+                "description": ["p1", "p2"]
+            }
+        ]
+    },
     "bronze": {},
     "co-org": {},
     "media" : {},
