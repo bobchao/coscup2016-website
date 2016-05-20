@@ -32,5 +32,7 @@ if( typeof Array.prototype.shuffle === 'undefined' ) {
 }
 
 if( typeof Array.prototype.isArray === 'undefined' ) {
+    // So that only array.isArray would be true.
+    // Maybe...
     Array.prototype.isArray = true;
 }
