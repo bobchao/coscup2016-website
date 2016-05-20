@@ -30,3 +30,7 @@ if( typeof Array.prototype.shuffle === 'undefined' ) {
         }
     }
 }
+
+if( typeof Array.prototype.isArray === 'undefined' ) {
+    Array.prototype.isArray = true;
+}
