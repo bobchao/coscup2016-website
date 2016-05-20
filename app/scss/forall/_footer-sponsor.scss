@@ -12,6 +12,15 @@ section[role="footer-sponsor"] {
         &:first-of-type {
             margin-top : 0;
         }
+        @include rwd(1400px) {
+            width      : 980px;
+        }
+        @include rwd(1050px) {
+            width      : 700px;
+        }
+        @include tablet() {
+            width      : 80%;
+        }
     }
 
     header[role="sponsor-class"] {
@@ -32,6 +41,9 @@ section[role="footer-sponsor"] {
         }
         img {
             max-width  : 300px;
+            @include tablet() {
+                max-width     : 100%;
+            }
         }
         p {
             text-align : center;
