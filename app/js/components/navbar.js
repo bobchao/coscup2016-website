@@ -56,7 +56,6 @@ var Links = React.createClass({
         langStore.register(this.changeHandler);
     },
     render: function() {
-        console.log(this.state.lang);
         var lang = this.state.lang;
         var href = window.location.href.split("/").back();
         if( href === '' )
