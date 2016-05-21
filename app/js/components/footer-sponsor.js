@@ -33,8 +33,8 @@ var SponsorClass = React.createClass({
     render: function() {
         var data     = getData(this.props.role);
         var lang     = this.state.lang;
-        var sponsors = data.sponsors.map((dt) => {
-            return <Sponsor dt={dt} />
+        var sponsors = data.sponsors.map((dt,id) => {
+            return <Sponsor key={id} dt={dt} />
         });
         return (
             <section role={this.props.role}>
