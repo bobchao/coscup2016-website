@@ -1,9 +1,20 @@
 // Include library
 var assign       = require('object-assign');
 var EventEmitter = require('events').EventEmitter;
+var cookie       = require('lib/cookie.js');
 
 // State of now showing language
-var state = 'en';
+var state = (() => {
+    var cookieSet = cookie.find('lang') || '';
+    if( cookieSet === 'en' || cookieSet === 'zh' )
+        return cookieSet;
+
+    var navigaSet = navigator.language || '';
+    if( navigaSet === 'zh-TW' || navigaSet === 'zh' )
+        return 'zh';
+
+    return 'en';
+})();
 
 // Button click -> state change -> UI change
 // Inherit nodeJS event library
@@ -28,6 +39,7 @@ var store = assign({}, EventEmitter.prototype, {
             state = 'en';
         else if( newState === 'zh' )
             state = 'zh';
+        cookie.insert('lang', state);
         this.emit('lang-change');
     }
 });
