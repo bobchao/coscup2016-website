@@ -4,6 +4,7 @@
 - transport page 排版
 - transport page 加上路徑顯示
 - 上 index page -- took by Sunset
+- 更新排版與配色
 
 ## 環境準備
 npm 版本過舊可能會導致之後 build 失敗  
