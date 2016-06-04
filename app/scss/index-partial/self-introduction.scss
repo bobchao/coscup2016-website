@@ -1,13 +1,25 @@
 main {
     position: relative;
-    background-color: $color_gray_bg;
+    background-color: white;
 
-    article[role="self-introduction"] {
+    section[role="index-body"] {
         font-size : $font_base;
-        max-width : 700px;
-        margin    : 0 auto; 
-        padding   : 20em 0;
-        color     : $color_black_text;
+        max-width : 700px;  
+        margin    : 0 auto;
+        padding   : 4em 0;
+        color     : $color_green_bg;
         text-align: justify;
+    }
+
+    article[role="important-info"] {
+        strong {
+            display      : block;
+            text-align   : center;
+            margin-bottom: .5em;
+            font-size    : $font_medium; 
+        }
+        p {
+            text-align: center;
+        }
     }
 }

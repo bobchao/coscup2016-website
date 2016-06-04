@@ -2,7 +2,6 @@
     {
         "text": {
             "zh": "首頁",
-            "gh": "",
             "en": "Index"
         },
         "url": "index.html"
@@ -11,7 +10,6 @@
     {
         "text": {
             "zh": "議程",
-            "gh": "",
             "en": "Schedule"
         },
         "url": "schedules.html"
@@ -20,7 +18,6 @@
     {
         "text": {
             "zh": "贊助",
-            "gh": "",
             "en": "Sponsors"
         },
         "url": "sponsors.html"
@@ -29,7 +26,6 @@
     {
         "text": {
             "zh": "交通",
-            "gh": "",
             "en": "Transport"
         },
         "url": "transport.html"
@@ -38,7 +34,6 @@
     {
         "text": {
             "zh": "直播",
-            "gh": "",
             "en": "Live"
         },
         "url": "live.html"
@@ -47,7 +42,6 @@
     {
         "text": {
             "zh": "籌備團隊",
-            "gh": "",
             "en": "Staffs"
         },
         "url": "staffs.html"

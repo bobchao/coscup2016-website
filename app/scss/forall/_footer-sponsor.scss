@@ -2,8 +2,8 @@
 
 section[role="footer-sponsor"] {
     font-size       : $font_base;
-    padding         : 4em 0;
-    background-color: $color_green_bar;
+    padding-bottom  : 4em;
+    background-color: white;
 
     & > section {
         margin      : 4em auto 0 auto;
@@ -26,7 +26,7 @@ section[role="footer-sponsor"] {
     header[role="sponsor-class"] {
         display     : block;
         font-size   : 2em;
-        color       : $color_gray;
+        color       : $color_green_bg;
     }
     div[role="sponsor"] {
         display     : inline-block;

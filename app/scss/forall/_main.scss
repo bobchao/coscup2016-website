@@ -3,6 +3,7 @@
 @import 'color';
 @import 'animate';
 @import 'responsive';
+@import 'article';
 @import 'bugar';
 @import 'navbar';
 @import 'footer-sponsor';
@@ -25,4 +26,10 @@ html {
 [role="clear-float"] {
     display         : block;
     clear           : both;
+}
+
+img[role="seperator"] {
+    display         : block;
+    font-size       : $font_base;
+    margin          : 3em auto;
 }

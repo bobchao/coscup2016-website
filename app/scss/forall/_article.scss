@@ -1,0 +1,9 @@
+article[role="paragraphs"] {
+    p {
+        line-height: 1.6em;
+        
+        & ~ p {
+            margin-top: 1em;
+        }
+    }
+}
