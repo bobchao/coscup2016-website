@@ -67,6 +67,7 @@ var Links = React.createClass({
                     <a href={pages.url}>
                         {pages.text[lang]}
                     </a>
+                    <div role="green-bar"></div>
                 </li>
             );
         });
@@ -82,10 +83,10 @@ var Navbar = React.createClass({
     render: function() {
         return (
             <nav role="banner">
-                <Bugar />
-                <img role="logo" src="images/logo.png" />
-                <Links />
-                <span role="vertical-anchor">{"1"}</span>
+                <section role="page-links">
+                    <Bugar />
+                    <Links />
+                </section>
                 <LangSwitch />
                 <div role="clear-float"></div>
             </nav>

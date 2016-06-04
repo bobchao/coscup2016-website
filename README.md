@@ -3,7 +3,6 @@
 ## 酒館 : 任務清單
 - transport page 排版
 - transport page 加上路徑顯示
-- 上 cover banner - Sunset
 - 上 index page
 
 ## 環境準備

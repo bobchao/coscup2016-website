@@ -3,81 +3,96 @@
 nav[role="banner"] {
     display         : block;
     position        : relative;
+    height          : 20em;
     font-size       : $font_medium;
-    height          : 2em;
-    line-height     : 2em;
-    padding         : .5em;
-    background-color: $color_green_bg_hover;
-
-    // Fixed vertical position of non text elements
-    span[role="vertical-anchor"] {
-        line-height       : 2em;
-        opacity           : 0;
-    }
-
-    // Logo
-    img[role="logo"] {
-        height            : 1.2em;
-        vertical-align    : sub;
-    }
+    background-image: url('/images/coverBG.jpg');
+    background-size : cover;
+    background-position: 50% 50%;
+    background-repeat  : no-repeat;
 
     // Each pages' link
-    & > ul {
-        display     : inline-block;
-        font-size   : $font_base;
-        z-index     : 999;
+    section[role="page-links"] {
+        position        : absolute;
+        bottom          : 0;
+        width           : 100%;
+        z-index         : 999;
 
-        @include tablet() {
-            position       : absolute;
-            left           : 0;
-            top            : 100%;
-            width          : 100%;
-        }
-    }
-    & > ul > li {
-        list-style  : none;
-        display     : inline-block;
-        padding     : 0 .3em;
-        cursor      : pointer;
+        & > ul {
+            display     : block;
+            width       : 100%;
+            font-size   : $font_base;
+            text-align  : center;
+            padding     : 1.1em 0;
+            border-top   : $color_green_bg 1px solid;
+            border-bottom: $color_green_bg 1px solid;
+            background  : white;
+            background  : rgba(255,255,255,.8);
 
-        a {
-            border-bottom  : 1px solid transparent;
-            color          : $color_gray;
-            text-decoration: none;
-            transition     : border-bottom 200ms;
+            @include tablet() {
+                position       : absolute;
+                left           : 0;
+                top            : 100%;
+                width          : 100%;
+            }
         }
-        &.active > a {
-            border-bottom  : 1px solid $color_gray;
-        }
-        &:hover  > a {
-            border-bottom  : 1px solid $color_gray;
-        }
+        & > ul > li {
+            display     : inline-block;
+            position    : relative;
+            list-style  : none;
+            width       : 7em;
 
-        @include tablet() {
-            display        : block;
-            width          : 100%;
-            padding        : 0;
-            text-align     : center;
-            background     : $color_green_bg_hover;
-            transform      : translateX (-100%);
-            transform      : translate3d(-100%,0,0);
-            transition     : transform 800ms $time_quartic;
+            a {
+                display        : inline-block;
+                width          : 100%;
+                border-bottom  : 1px solid transparent;
+                color          : $color_green_bg;
+                text-decoration: none;
+                transition     : border-bottom 200ms;
+            }
+            [role="green-bar"] {
+                position       : absolute;
+                bottom         : -.5em;
+                width          : 0em;
+                left           : 50%;
+                height         : .2em;
+                border-radius  : 1em;
+                background     : $color_green_bg;
+                transform      : translateX(-50%);
+                transition     : width 300ms $time_quartic;
+            }
+            &.active > [role="green-bar"] {
+                width          : 6em;
+            }
+            &:hover  > [role="green-bar"] {
+                width          : 6em;
+            }
+
+            @include tablet() {
+                display        : block;
+                width          : 100%;
+                padding        : 0;
+                text-align     : center;
+                background     : $color_green_bg_hover;
+                transform      : translateX (-100%);
+                transform      : translate3d(-100%,0,0);
+                transition     : transform 800ms $time_quartic;
+            }
         }
     }
 
     // Language switch button
     nav[role="lang-switch"] {
         position    : absolute;
-        right       : 0;
-        top         : 50%;
+        bottom      : 5em;
+        left        : 50%;
         font-size   : $font_base;
-        transform   : translateY(-50%);
+        transform   : translate(-50%,-50%);
 
         span {
             font-size     : $font_base;
             margin        : 0 1em 0 0;
             border        : 0;
-            color         : $color_gray;
+            color         : $color_green_bg;
             cursor        : pointer;
             opacity       : .5;
 
