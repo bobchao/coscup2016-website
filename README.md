@@ -1,12 +1,11 @@
 # coscup 2016 website
 
-## TODO
-- [ ] 將各分頁 html 建好，navbar，footer
-- [ ] 用[去年資料](http://coscup.org/2015/en/)把基本資料的 react 架構放上網頁
-  * 每個 component 應該會有 正中，簡中，English 的 state
-- [ ] 把 openStreetMap 接好放上網頁
-- [ ] 議程表，講者列表，贊助廠商，協辦單位列表應該要有 API parser
-  * 到時候 API 的資料跟預定的不一樣就改 parser 就好
+## 酒館 : 任務清單
+- 移除 speaker page - Sunset
+- transport page 排版
+- transport page 加上路徑顯示
+- 上 cover banner
+- 上 index page
 
 ## 環境準備
 npm 版本過舊可能會導致之後 build 失敗  
