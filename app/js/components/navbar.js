@@ -34,7 +34,7 @@ var LangSwitch = React.createClass({
             <nav role="lang-switch">
                 <span onClick={this.handleClickZH}
                         className={zhClass}>
-                    正體
+                    繁體中文
                 </span>
                 <span onClick={this.handleClickEN}
                         className={enClass}>
