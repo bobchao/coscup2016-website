@@ -43,3 +43,13 @@ a[role="link-btn"] {
     border-radius   : 2em;
     text-decoration : none;
 }
+
+[role="ASAP"] {
+    display         : block;
+    font-size       : $font_large;
+    margin          : 4em auto;
+    color           : $color_green_bg;
+    opacity         : .5;
+    text-align      : center;
+    letter-spacing  : .5em;
+}
