@@ -42,8 +42,14 @@ var spnsData = [
         "logourl": "/images/sponsors/test.png",
         "nameen": "Place 1",
         "namezh": "配斯 1",
-        "introen": "Hello world",
-        "introzh": "你好世界"
+        "introen": "\
+[Test for markdonw](https://www.npmjs.com/package/remarkable)  \n\
+**Test for markdown** __Test for markdown__  \n\
+*Test for markdown* _Test for markdown_ ~~Test for markdown~~",
+        "introzh": "\
+[測試 markdonw](https://www.npmjs.com/package/remarkable)  \n\
+**測試 markdown** __測試 markdown__  \n\
+*測試 markdown* _測試 markdown_ ~~測試 markdown~~"
     },
     {
         "level": 1,
@@ -128,7 +134,7 @@ function equilJoin() {
     });
     ret.forEach(function(ele) {
         ele.sponsors.sort(function(a, b) {
-            return a.place < b.place;
+            return a.place > b.place;
         });
     });
     return ret;

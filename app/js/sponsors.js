@@ -1,6 +1,7 @@
 // Include library
 var React     = require('react');
 var ReactDOM  = require('react-dom');
+var Remarkable= require('remarkable');
 
 // Include dependency
 var Navbar    = require('components/navbar.js');
@@ -8,11 +9,18 @@ var Footer    = require('components/footer.js');
 var langStore = require('stores/lang.js');
 var datas     = require('dataloaders/sponsor.js').getAll();
 
+function markup(text) {
+    var md       = new Remarkable();
+    var markdown = md.render(text);
+    return { __html: markdown};
+}
+
 // Implement index page
 var Sponsor = React.createClass({
     render: function() {
         var data = this.props.data;
         var lang = this.props.lang;
+        var markdown = markup(data.description[lang]);
         return (
             <section role="sponsor">
                 <div role="sponsor-logo">
@@ -22,9 +30,7 @@ var Sponsor = React.createClass({
                 </div>
                 <div role="sponsor-text">
                     <header>{data.name[lang]}</header>
-                    <article>
-                        {data.description[lang]}
-                    </article>
+                    <article dangerouslySetInnerHTML={markdown} />
                 </div>
                 <div role="clear-float"></div>
             </section>
