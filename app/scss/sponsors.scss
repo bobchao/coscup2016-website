@@ -1,1 +1,52 @@
 @import 'forall/main';
+
+section[role="sponsor-list"] {
+    font-size: $font_base;
+    display  : block;
+    max-width: 800px;
+    margin   : 6em auto;
+}
+
+section[role="sponsor-class"] {
+    & > header {
+        display   : block;
+        font-size : $font_large;
+        text-align: center;
+        color     : $color_green_bg;
+    }
+
+    & ~ & {
+        margin-top: 6em;
+    }
+}
+
+section[role="sponsor"] {
+    position  : relative;
+    margin-top: 4em;
+
+    [role="sponsor-logo"] {
+        width         : 30%;
+        float         : left;
+        vertical-align: top;
+
+        a {
+            display: inline-block;
+            border : 1px solid #333;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    [role="sponsor-text"] {
+        width: 69%;
+        float: right;
+
+        & > header {
+            font-size: $font_medium;
+            color    : $color_green_bg;
+        }
+        & > article {
+            line-height: 1.6em;
+        }
+    }
+}

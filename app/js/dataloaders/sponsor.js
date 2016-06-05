@@ -1,7 +1,7 @@
 // This module responsible for convert api data
 // to our front-end needed format.
 
-// If saddly the api spec not same as below,
+// If saddly the api spec not consistent,
 // we would need api parser to convert to below format.
 var alias    = {
     "diamon"  : 0,
@@ -30,18 +30,18 @@ var spnsData = [
         "place": 0,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
-        "introen": "Hello world",
-        "introzh": "你好世界"
+        "nameen": "Place 0",
+        "namezh": "配斯 0",
+        "introen": "Logo's border will be removed after releasing",
+        "introzh": "Logo 的框框上線後會移掉"
     },
     {
         "level": 0,
         "place": 1,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Place 1",
+        "namezh": "配斯 1",
         "introen": "Hello world",
         "introzh": "你好世界"
     },
@@ -50,8 +50,8 @@ var spnsData = [
         "place": 0,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Place 0",
+        "namezh": "配斯 0",
         "introen": "Hello world",
         "introzh": "你好世界"
     },
@@ -60,8 +60,8 @@ var spnsData = [
         "place": 1,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Place 1",
+        "namezh": "配斯 1",
         "introen": "Hello world",
         "introzh": "你好世界"
     },
@@ -70,8 +70,8 @@ var spnsData = [
         "place": 2,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Place 2",
+        "namezh": "配斯 2",
         "introen": "Hello world",
         "introzh": "你好世界"
     },
@@ -80,8 +80,8 @@ var spnsData = [
         "place": 3,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Plcae 3",
+        "namezh": "配斯 3",
         "introen": "Hello world",
         "introzh": "你好世界"
     },
@@ -90,30 +90,15 @@ var spnsData = [
         "place": 4,
         "logolink": "http://example.com/",
         "logourl": "/images/sponsors/test.png",
-        "nameen": "Sample",
-        "namezh": "樣品",
+        "nameen": "Place 4",
+        "namezh": "配斯 4",
         "introen": "Hello world",
         "introzh": "你好世界"
     }
 ];
 
-var apiData = [
-    {
-        "className" : {
-            "en": "Golden",
-            "zh": ""
-        },
-        "sponsors"  : [
-            {
-                "key"        : 1,
-                "name"       : "gold 1",
-                "url"        : "",
-                "logoUrl"    : "images/sponsors/test.png",
-                "description": ["p1", "p2"]
-            }
-        ]
-    }
-];
+// set as default
+var apiData = [];
 
 function equilJoin() {
     var ret = [];
@@ -151,10 +136,15 @@ function equilJoin() {
 
 apiData = equilJoin();
 
-module.exports = function(type) {
-    if( typeof apiData[alias[type]] === 'undefined' ) {
-        console.error('Sponsor type undefined');
-        return;
+module.exports = {
+    getType: function(type) {
+        if( typeof apiData[alias[type]] === 'undefined' ) {
+            console.error('Sponsor type undefined');
+            return;
+        }
+        return apiData[alias[type]];
+    },
+    getAll: function() {
+        return apiData;
     }
-    return apiData[alias[type]];
 };

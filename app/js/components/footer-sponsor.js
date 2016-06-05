@@ -2,7 +2,7 @@
 var React     = require('react');
 
 // Include dependency
-var getData   = require('dataloaders/sponsor.js');
+var getData   = require('dataloaders/sponsor.js').getType;
 var langStore = require('stores/lang.js');
 
 // Implement
@@ -10,7 +10,6 @@ var Sponsor = React.createClass({
     render: function() {
         var dt   = this.props.dt;
         var lang = this.props.lang;
-        console.log(dt);
         return (
             <div role="sponsor">
                 <a href={dt.url} target="_blank">
