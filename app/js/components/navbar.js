@@ -32,13 +32,14 @@ var LangSwitch = React.createClass({
         }
         return (
             <nav role="lang-switch">
-                <span onClick={this.handleClickZH}
-                        className={zhClass}>
-                    繁體中文
-                </span>
                 <span onClick={this.handleClickEN}
                         className={enClass}>
                     EN
+                </span>
+                <span role="seperator">/</span>
+                <span onClick={this.handleClickZH}
+                        className={zhClass}>
+                    繁體中文
                 </span>
             </nav>
         );
