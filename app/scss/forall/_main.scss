@@ -31,5 +31,15 @@ html {
 img[role="seperator"] {
     display         : block;
     font-size       : $font_base;
-    margin          : 3em auto;
+    margin          : 6em auto;
+}
+
+a[role="link-btn"] {
+    display         : block;
+    background-color: $color_green_bg;
+    color           : white;
+    padding         : .3em;
+    text-align      : center;
+    border-radius   : 2em;
+    text-decoration : none;
 }

@@ -12,7 +12,7 @@ var Activity  = React.createClass({
         var lContent = [];
         var rContent = [];
         if( this.props.left ) {
-            lContent.push(<h1>{this.props.left.title}</h1>);
+            lContent.push(<h2>{this.props.left.title}</h2>);
             lContent.push(<p>{this.props.left.article}</p>);
             lContent.push(  <a role="link-btn"
                                href={this.props.left.url}>
@@ -20,7 +20,7 @@ var Activity  = React.createClass({
                             </a>);
         }
         if( this.props.right ) {
-            rContent.push(<h1>{this.props.right.title}</h1>);
+            rContent.push(<h2>{this.props.right.title}</h2>);
             rContent.push(<p>{this.props.right.article}</p>);
             rContent.push(  <a role="link-btn"
                                href={this.props.right.url}>
@@ -61,13 +61,13 @@ var Introduction = React.createClass({
         while( idx<activitys.length ) {
             if( idx+1 < activitys.length )
                 activitysRow.push(
-                    <Activity 
+                    <Activity key={lang + idx}
                         left ={activitys[idx]}
                         right={activitys[idx+1]}/>
                 );
             else
                 activitysRow.push(
-                    <Activity 
+                    <Activity key={lang + idx}
                         left ={activitys[idx]}/>
                 );
             idx += 2;

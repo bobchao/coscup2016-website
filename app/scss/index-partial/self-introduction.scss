@@ -4,7 +4,7 @@ main {
 
     section[role="index-body"] {
         font-size : $font_base;
-        max-width : 700px;  
+        max-width : 800px;  
         margin    : 0 auto;
         padding   : 4em 0 0 0;
         color     : $color_green_bg;
@@ -20,6 +20,52 @@ main {
         }
         p {
             text-align: center;
+        }
+    }
+
+    section[role="activity-gate"] {
+        position   : relative;
+        line-height: 1.6em;
+        padding    : 0 0 3em 0;
+        
+        & + section {
+            margin-top    : 4em;
+        }
+
+        article {
+            h2 {
+                font-size : $font_medium;
+                text-align: center;
+                margin    : 0 0 .5em 0;
+            }
+            p {
+                color     : #333;
+            }
+            a {
+                position  : absolute;
+                bottom    : 0;
+                font-size : $font_base;
+                letter-spacing: 1em;
+            }
+        }
+
+        [role="left"] {
+            float         : left;
+            width         : 48%;
+            vertical-align: top;
+            a {
+                left      : 0;
+                width     : 47%;
+            }
+        }
+        [role="right"] {
+            float         : right;
+            width         : 48%;
+            vertical-align: top;
+            a {
+                right     : 0;
+                width     : 47%;
+            }
         }
     }
 }
