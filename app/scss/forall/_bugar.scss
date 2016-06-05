@@ -12,10 +12,6 @@ nav[role="bugar-button"] {
     cursor        : pointer;
     vertical-align: sub;
 
-    @include tablet() {
-        display   : inline-block;
-    }
-
     & > li {
         position     : absolute;
         display      : block;

@@ -6,6 +6,7 @@ var React     = require('react');
 var navbarDt  = require('json/navbar.json');
 var Bugar     = require('components/bugar.js');
 var langStore = require('stores/lang.js');
+var resizer   = require('stores/onresize.js');
 
 // Implement navbar banner
 var LangSwitch = React.createClass({
@@ -81,9 +82,23 @@ var Links = React.createClass({
 });
 
 var Navbar = React.createClass({
+    coculateHeight: function() {
+        return (resizer.windowWidth()*0.3) + 'px';
+    },
+    getInitialState: function() {
+        return {height: this.coculateHeight()};
+    },
+    resizeHandler: function() {
+        this.setState({height: this.coculateHeight()});
+    },
+    componentDidMount: function() {
+        resizer.register(this.resizeHandler);
+    },
     render: function() {
+        var style = {height: this.state.height};
+        console.log(style);
         return (
-            <nav role="banner">
+            <nav role="banner" style={style}>
                 <section role="page-links">
                     <Bugar />
                     <Links />
