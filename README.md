@@ -4,8 +4,7 @@
 - transport page 排版
 - transport page 加上路徑顯示
 - cover RwD
-- Sponsor page
-- Staff page - Sunset
+- Sponsor page - Sunset
 - 議程 Boss
 
 ## 環境準備

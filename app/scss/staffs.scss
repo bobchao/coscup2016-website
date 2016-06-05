@@ -1,1 +1,23 @@
 @import 'forall/main';
+
+section[role="team-list"] {
+    display  : block;
+    max-width: 700px;
+    margin   : 4em auto 0 auto;
+
+    div[role="team"] {
+        font-size: $font_base;
+        
+        h2 {
+            font-size: $font_medium;
+            color    : $color_green_bg;
+        }
+        p {
+            color    : #333;
+        }
+
+        & ~ div[role="team"] {
+            margin: 2em 0 0 0;
+        }
+    }
+}
