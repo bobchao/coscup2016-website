@@ -2,10 +2,44 @@
 var React     = require('react');
 
 // Include dependency
-var textIntro = require('json/index-page.json');
+var pageText  = require('json/index-page.json');
 var langStore = require('stores/lang.js');
 var Seperator = require('components/seperator.js');
 var Article   = require('components/article.js');
+
+var Activity  = React.createClass({
+    render: function() {
+        var lContent = [];
+        var rContent = [];
+        if( this.props.left ) {
+            lContent.push(<h1>{this.props.left.title}</h1>);
+            lContent.push(<p>{this.props.left.article}</p>);
+            lContent.push(  <a role="link-btn"
+                               href={this.props.left.url}>
+                                {this.props.left.btn}
+                            </a>);
+        }
+        if( this.props.right ) {
+            rContent.push(<h1>{this.props.right.title}</h1>);
+            rContent.push(<p>{this.props.right.article}</p>);
+            rContent.push(  <a role="link-btn"
+                               href={this.props.right.url}>
+                                {this.props.right.btn}
+                            </a>);
+        }
+        return (
+            <section role="activity-gate">
+                <article role="left">
+                    {lContent}  
+                </article>
+                <article role="right">
+                    {rContent}
+                </article>
+                <div role="clear-float"></div>
+            </section>
+        );
+    }
+});
 
 // Implement index page introduction
 var Introduction = React.createClass({
@@ -20,6 +54,24 @@ var Introduction = React.createClass({
     },
     render: function() {
         var lang = this.state.lang;
+        var introduction = pageText.introduction[lang];
+        var activitys    = pageText.activity[lang];
+        var activitysRow = [];
+        var idx = 0;
+        while( idx<activitys.length ) {
+            if( idx+1 < activitys.length )
+                activitysRow.push(
+                    <Activity 
+                        left ={activitys[idx]}
+                        right={activitys[idx+1]}/>
+                );
+            else
+                activitysRow.push(
+                    <Activity 
+                        left ={activitys[idx]}/>
+                );
+            idx += 2;
+        }
         return (
             <section role="index-body">
 
@@ -31,7 +83,11 @@ var Introduction = React.createClass({
 
                 <Seperator />
 
-                <Article data={textIntro[lang]} />
+                {activitysRow}
+
+                <Seperator />
+
+                <Article data={introduction} />
 
                 <Seperator />
                 
