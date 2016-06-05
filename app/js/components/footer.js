@@ -35,9 +35,6 @@ var Footer = React.createClass({
         }
         return (
             <footer role="banner">
-                <section role="old-coscup-link">
-                    {links}
-                </section>
                 <section role="social-network-link">
                     <SocialNetworkLink
                         name="blogger"
@@ -60,6 +57,9 @@ var Footer = React.createClass({
                     <SocialNetworkLink
                         name="youtube"
                         href="https://www.youtube.com/user/thecoscup" />
+                </section>
+                <section role="old-coscup-link">
+                    {links}
                 </section>
             </footer>
         );

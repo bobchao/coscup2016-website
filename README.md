@@ -4,7 +4,6 @@
 - transport page 排版
 - transport page 加上路徑顯示
 - cover RwD
-- footer - Sunset
 - 更新排版與配色
 - Sponsor page
 - Staff page

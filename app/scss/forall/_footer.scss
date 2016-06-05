@@ -2,10 +2,11 @@
 
 footer[role="banner"] {
     padding         : 2em 1em;
-    background-color: $color_green_bg;
+    border-top      : 1px solid $color_green_bg;
+    background-color: white;
 
     a {
-        opacity     : .5;
+        opacity     : .8;
 
         &:hover {
             opacity : 1;
@@ -17,13 +18,13 @@ footer[role="banner"] {
 
         a {
             font-family    : $mono;
-            color          : $color_gray;
+            color          : $color_green_bg;
             text-decoration: none;
         }
         span {
             display        : inline-block; 
             padding        : 0 .5em;
-            color          : $color_gray;
+            color          : $color_green_bg;
             cursor         : default;
         }
     }
@@ -34,7 +35,7 @@ footer[role="banner"] {
         a {
             display        : inline-block;
             margin-right   : 2em;
-            margin-top     : 1em;
+            margin-bottom  : 1em;
         }
         img {
             height         : 2em;
