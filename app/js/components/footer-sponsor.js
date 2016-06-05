@@ -8,13 +8,15 @@ var langStore = require('stores/lang.js');
 // Implement
 var Sponsor = React.createClass({
     render: function() {
-        var dt = this.props.dt;
+        var dt   = this.props.dt;
+        var lang = this.props.lang;
+        console.log(dt);
         return (
             <div role="sponsor">
                 <a href={dt.url} target="_blank">
                     <img src={dt.logoUrl} />
                 </a>
-                <p>{dt.name}</p>
+                <p>{dt.name[lang]}</p>
             </div>
         )
     }
@@ -34,14 +36,16 @@ var SponsorClass = React.createClass({
         var data     = getData(this.props.role);
         var lang     = this.state.lang;
         var sponsors = data.sponsors.map((dt,id) => {
-            return <Sponsor key={id} dt={dt} />
+            return <Sponsor key={id} dt={dt} lang={lang} />
         });
         return (
             <section role={this.props.role}>
-                <header role="sponsor-class">{data.className[lang]}</header>
+                <header role="sponsor-class">
+                    {data.className[lang]}
+                </header>
                 {sponsors}
             </section>
-        )
+        );
     }
 });
 
@@ -49,8 +53,8 @@ var FooterSponsor = React.createClass({
     render: function() {
         return (
             <section role="footer-sponsor">
+                <SponsorClass role="diamon" />
                 <SponsorClass role="golden" />
-                <SponsorClass role="silver" />
             </section>
         );
     }
