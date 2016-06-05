@@ -2,5 +2,11 @@
 
 section[role="transport"] {
     font-size       : $font_base;
-    padding         : 1em;
+    padding         : 1em 5em 1em 5em;
+    a {
+        margin-left: 1em;
+        img {
+            height         : 1em;
+        }
+    }
 }
