@@ -2,11 +2,19 @@
 
 section[role="transport"] {
     font-size       : $font_base;
-    padding         : 1em 5em 1em 5em;
+    padding         : 1em 0;
     a {
         margin-left: 1em;
         img {
             height         : 1em;
         }
     }
+    [role="title"] {
+        color      : $color_green_bg;
+    }
+}
+
+div[role="transport-text-info"] {
+    max-width: 800px;
+    margin   : 2em auto 0 auto;
 }
