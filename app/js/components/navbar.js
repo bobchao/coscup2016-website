@@ -96,7 +96,6 @@ var Navbar = React.createClass({
     },
     render: function() {
         var style = {height: this.state.height};
-        console.log(style);
         return (
             <nav role="banner" style={style}>
                 <section role="page-links">
