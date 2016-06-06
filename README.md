@@ -3,8 +3,8 @@
 ## 酒館 : 任務清單
 - transport page 排版
 - transport page 加上路徑顯示
-- cover RwD - Sunset
-- 議程 Boss
+- cover RwD
+- 議程 Boss - Sunset
 
 ## 環境準備
 npm 版本過舊可能會導致之後 build 失敗  
