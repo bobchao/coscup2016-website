@@ -1,8 +1,8 @@
 // This module responsible for convert api data
 // to our front-end needed format.
 
-// If saddly the api spec not consistent,
-// we would need api parser to convert to below format.
+var slotData = require('json/sponsor-class.json');
+var spnsData = require('json/sponsor.json');
 var alias    = {
     "diamon"  : 0,
     "golden"  : 1,
@@ -12,99 +12,6 @@ var alias    = {
     "special" : 5,
     "personal": 6
 };
-var slotData = [
-    {
-        "level": 0,
-        "nameen": "Diamond Level",
-        "namezh": "鑽石級贊助"
-    },
-    {
-        "level": 1,
-        "nameen": "Golden level",
-        "namezh": "金級贊助"
-    }
- ];
-var spnsData = [
-    {
-        "level": 0,
-        "place": 0,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 0",
-        "namezh": "配斯 0",
-        "introen": "Logo's border will be removed after releasing",
-        "introzh": "Logo 的框框上線後會移掉"
-    },
-    {
-        "level": 0,
-        "place": 1,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 1",
-        "namezh": "配斯 1",
-        "introen": "\
-[Test for markdonw](https://www.npmjs.com/package/remarkable)  \n\
-**Test for markdown** __Test for markdown__  \n\
-*Test for markdown* _Test for markdown_ ~~Test for markdown~~",
-        "introzh": "\
-[測試 markdonw](https://www.npmjs.com/package/remarkable)  \n\
-**測試 markdown** __測試 markdown__  \n\
-*測試 markdown* _測試 markdown_ ~~測試 markdown~~"
-    },
-    {
-        "level": 1,
-        "place": 0,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 0",
-        "namezh": "配斯 0",
-        "introen": "Hello world",
-        "introzh": "你好世界"
-    },
-    {
-        "level": 1,
-        "place": 1,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 1",
-        "namezh": "配斯 1",
-        "introen": "Hello world",
-        "introzh": "你好世界"
-    },
-    {
-        "level": 1,
-        "place": 2,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 2",
-        "namezh": "配斯 2",
-        "introen": "Hello world",
-        "introzh": "你好世界"
-    },
-    {
-        "level": 1,
-        "place": 3,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Plcae 3",
-        "namezh": "配斯 3",
-        "introen": "Hello world",
-        "introzh": "你好世界"
-    },
-    {
-        "level": 1,
-        "place": 4,
-        "logolink": "http://example.com/",
-        "logourl": "images/sponsors/test.png",
-        "nameen": "Place 4",
-        "namezh": "配斯 4",
-        "introen": "Hello world",
-        "introzh": "你好世界"
-    }
-];
-
-// set as default
-var apiData = [];
 
 function equilJoin() {
     var ret = [];
@@ -140,7 +47,7 @@ function equilJoin() {
     return ret;
 }
 
-apiData = equilJoin();
+var apiData = equilJoin();
 
 module.exports = {
     getType: function(type) {
