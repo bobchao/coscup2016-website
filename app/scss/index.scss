@@ -54,8 +54,7 @@ main {
                 position  : absolute;
                 bottom    : 0;
                 font-size : $font_base;
-                letter-spacing: 1em;
-                text-indent   : 1em;
+                word-spacing: 1em;
                 @include tablet() {
                     position: static;
                 }
