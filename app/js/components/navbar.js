@@ -11,6 +11,7 @@ var langStore = require('stores/lang.js');
 var resizer   = require('stores/onresize.js');
 var scroller  = require('stores/onscroll.js');
 
+
 // Implement navbar banner
 var LangSwitch = React.createClass({
     getInitialState: function() {
@@ -57,13 +58,8 @@ var Links = React.createClass({
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
-    scrollHandler: function() {
-        console.log(ReactDOM.findDOMNode(this).offsetHeight);
-        this.setState({top: scroller.top()});
-    },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
-        scroller.register(this.scrollHandler);
     },
     render: function() {
         var lang = this.state.lang;
@@ -104,14 +100,30 @@ var Navbar = React.createClass({
         }
         return nState;
     },
+    navbarAdjust: function() {
+        navbarHeight = ReactDOM.findDOMNode(this).offsetHeight;
+        linksHeight = ReactDOM.findDOMNode(this.refs.links).offsetHeight;
+        if(this.state.top > navbarHeight - linksHeight){
+            ReactDOM.findDOMNode(this.refs.links).style.position = "fixed";
+            ReactDOM.findDOMNode(this.refs.links).style.top = "0px";
+        } else {
+            ReactDOM.findDOMNode(this.refs.links).style.position = "relative";
+        }
+    },
     getInitialState: function() {
         return this.coculateState();
     },
     resizeHandler: function() {
         this.setState(this.coculateState());
+        this.navbarAdjust();
+    },
+    scrollHandler: function() {
+        this.setState({top: scroller.top()});
+        this.navbarAdjust();
     },
     componentDidMount: function() {
         resizer.register(this.resizeHandler);
+        scroller.register(this.scrollHandler);
     },
     render: function() {
         var style = {height: this.state.height};
@@ -135,7 +147,7 @@ var Navbar = React.createClass({
 
                 <section role="page-links">
                     <Bugar />
-                    <Links />
+                    <Links ref="links" style="position: fixed;" />
                 </section>
 
                 <div role="clear-float"></div>
