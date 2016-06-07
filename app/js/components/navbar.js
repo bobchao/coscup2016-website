@@ -101,8 +101,8 @@ var Navbar = React.createClass({
         return nState;
     },
     navbarAdjust: function() {
-        navbarHeight = ReactDOM.findDOMNode(this).offsetHeight;
-        linksHeight = ReactDOM.findDOMNode(this.refs.links).offsetHeight;
+        var navbarHeight = ReactDOM.findDOMNode(this).offsetHeight;
+        var linksHeight = ReactDOM.findDOMNode(this.refs.links).offsetHeight;
         if(this.state.top > navbarHeight - linksHeight){
             ReactDOM.findDOMNode(this.refs.links).style.position = "fixed";
             ReactDOM.findDOMNode(this.refs.links).style.top = "0px";
