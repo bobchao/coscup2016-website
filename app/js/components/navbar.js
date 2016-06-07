@@ -1,12 +1,14 @@
 // Include library
 require('lib/arrayExtended.js');
 var React     = require('react');
+var dom       = require('lib/dom.js');
 
 // Include dependency
 var navbarDt  = require('json/navbar.json');
 var Bugar     = require('components/bugar.js');
 var langStore = require('stores/lang.js');
 var resizer   = require('stores/onresize.js');
+var scroller  = require('stores/onscroll.js');
 
 // Implement navbar banner
 var LangSwitch = React.createClass({
@@ -49,17 +51,22 @@ var LangSwitch = React.createClass({
 
 var Links = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState()};
+        return {lang: langStore.getState(), top: scroller.top()};
     },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
+    scrollHandler: function() {
+        this.setState({top: scroller.top()});
+    },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
+        scroller.register(this.scrollHandler);
     },
     render: function() {
         var lang = this.state.lang;
         var href = window.location.href.split("/").back();
+
         if( href === '' )
             href = 'index.html';
         var lis  = navbarDt.map(function(pages, id) {
