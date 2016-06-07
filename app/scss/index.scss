@@ -1,3 +1,108 @@
 @import 'forall/main';
 
-@import 'index-partial/self-introduction.scss';
+main {
+    position: relative;
+    background-color: white;
+
+    section[role="index-body"] {
+        font-size : $font_base;
+        max-width : 800px;  
+        margin    : 0 auto;
+        padding   : 4em 0 0 0;
+        color     : $color_green_bg;
+        text-align: justify;
+    }
+
+    article[role="important-info"] {
+        strong {
+            display      : block;
+            text-align   : center;
+            margin-bottom: .5em;
+            font-size    : $font_medium; 
+
+            @include tablet() {
+                font-size: $font_base;
+            }
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    section[role="activity-gate"] {
+        position   : relative;
+        line-height: 1.6em;
+        padding    : 0 0 3em 0;
+        @include tablet() {
+            padding: 0;
+        }
+        
+        & + section {
+            margin-top    : 4em;
+        }
+
+        article {
+            h2 {
+                font-size : $font_medium;
+                text-align: center;
+                margin    : 0 0 .5em 0;
+            }
+            p {
+                color     : #333;
+            }
+            a {
+                position  : absolute;
+                bottom    : 0;
+                font-size : $font_base;
+                letter-spacing: 1em;
+                text-indent   : 1em;
+                @include tablet() {
+                    position: static;
+                }
+            }
+        }
+
+        [role="left"] {
+            float         : left;
+            width         : 48%;
+            vertical-align: top;
+            @include tablet() {
+                float     : none;
+                display   : block;
+                width     : 80%;
+                margin    : 0 auto;
+            }
+
+            a {
+                left      : 0;
+                width     : 47%;
+                @include tablet() {
+                    display: block;
+                    margin : .8em 0 0 0;
+                    width  : 100%;
+                }
+            }
+        }
+        [role="right"] {
+            float         : right;
+            width         : 48%;
+            vertical-align: top;
+            @include tablet() {
+                float     : none;
+                display   : block;
+                width     : 80%;
+                margin    : 4em auto 0 auto;
+            }
+            a {
+                right     : 0;
+                width     : 47%;
+                @include tablet() {
+                    display: block;
+                    margin : .8em 0 0 0;
+                    width  : 100%;
+                }
+            }
+        }
+    }
+}
+

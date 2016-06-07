@@ -1,9 +1,18 @@
 article[role="paragraphs"] {
+    display  : block;
+    margin   : 0 auto;
+    @include tablet() {
+        width: 80%;
+    }
+
     p {
         line-height: 1.6em;
         
         & ~ p {
             margin-top: 1em;
+            @include tablet() {
+                margin-top: 2em;
+            }
         }
     }
 }
