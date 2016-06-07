@@ -16,7 +16,7 @@ nav[role="bugar-button"] {
         position     : absolute;
         display      : block;
         width        : 100%;
-        border       : 1px solid $color_gray;
+        border       : 1px solid $color_green_bg;
         border-radius: 2px;
         transition   : transform 500ms $time_quartic,
                        top 500ms $time_quartic;
@@ -24,13 +24,13 @@ nav[role="bugar-button"] {
         transform-origin: center center;
     }
     & > li[role="bugar-top-bread"] {
-        top          : 25%;
+        top          : 30%;
     }
     & > li[role="bugar-ham"] {
         top          : 50%;
     }
     & > li[role="bugar-btn-bread"] {
-        top          : 75%;
+        top          : 70%;
     }
 }
 

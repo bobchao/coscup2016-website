@@ -94,9 +94,13 @@ var Navbar = React.createClass({
         };
         if( resizer.windowWidth() > 1500 )
             nState.height = (resizer.windowWidth()*0.3) + 'px';
-        else {
+        else if( resizer.windowWidth() > 900 ) {
             nState.height = (resizer.windowWidth()*0.45) + 'px';
             nState.cName  = 'banner-rwd-1500';
+        }
+        else {
+            nState.height = (resizer.windowWidth()*0.45) + 'px';
+            nState.cName  = 'banner-rwd-900';
         }
         return nState;
     },
@@ -107,8 +111,11 @@ var Navbar = React.createClass({
             || scroller.top() > navbarHeight - linksHeight){
             ReactDOM.findDOMNode(this.refs.links).style.position = "fixed";
             ReactDOM.findDOMNode(this.refs.links).style.top = "0px";
+            ReactDOM.findDOMNode(this.refs.links).style.bottom = "auto";
         } else {
-            ReactDOM.findDOMNode(this.refs.links).style.position = "relative";
+            ReactDOM.findDOMNode(this.refs.links).style.position = "absolute";
+            ReactDOM.findDOMNode(this.refs.links).style.top = "auto";
+            ReactDOM.findDOMNode(this.refs.links).style.bottom = "0px";
         }
     },
     getInitialState: function() {
@@ -124,6 +131,7 @@ var Navbar = React.createClass({
     componentDidMount: function() {
         resizer.register(this.resizeHandler);
         scroller.register(this.scrollHandler);
+        this.navbarAdjust();
     },
     render: function() {
         var style = {height: this.state.height};
@@ -145,12 +153,13 @@ var Navbar = React.createClass({
                          src="images/hero_line.svg" />                    
                 </header>
 
-                <section role="page-links">
+                <section ref="links" role="page-links">
                     <Bugar />
-                    <Links ref="links" style="position: fixed;" />
+                    <img role="logo" 
+                         src="images/coscup.svg" />
+                    <Links />
+                    <div role="clear-float"></div>
                 </section>
-
-                <div role="clear-float"></div>
             </nav>
         );
     }
