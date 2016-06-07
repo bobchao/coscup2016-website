@@ -91,22 +91,33 @@ var Links = React.createClass({
 });
 
 var Navbar = React.createClass({
-    coculateHeight: function() {
-        return (resizer.windowWidth()*0.3) + 'px';
+    coculateState: function() {
+        var nState = {
+            height: '20em',
+            cName : ''
+        };
+        if( resizer.windowWidth() > 1500 )
+            nState.height = (resizer.windowWidth()*0.3) + 'px';
+        else {
+            nState.height = (resizer.windowWidth()*0.45) + 'px';
+            nState.cName  = 'banner-rwd-1500';
+        }
+        return nState;
     },
     getInitialState: function() {
-        return {height: this.coculateHeight()};
+        return this.coculateState();
     },
     resizeHandler: function() {
-        this.setState({height: this.coculateHeight()});
+        this.setState(this.coculateState());
     },
     componentDidMount: function() {
         resizer.register(this.resizeHandler);
     },
     render: function() {
         var style = {height: this.state.height};
+        var cName = this.state.cName;
         return (
-            <nav role="banner" style={style}>
+            <nav role="banner" style={style} className={cName}>
                 <header>
                     <img role="up-hero-line"
                          src="images/hero_line.svg" />
@@ -115,16 +126,17 @@ var Navbar = React.createClass({
                     <strong>開源人年會</strong>
                     <img role="slogan"
                          src="images/main_withslogan.svg" />
+
+                    <LangSwitch />
+                    
                     <img role="btn-hero-line"
-                         src="images/hero_line.svg" />
+                         src="images/hero_line.svg" />                    
                 </header>
 
                 <section role="page-links">
                     <Bugar />
                     <Links />
                 </section>
-
-                <LangSwitch />
 
                 <div role="clear-float"></div>
             </nav>
