@@ -18,7 +18,8 @@ gulp.task('js', function(){
         }))
         .on('error', errorLog)
         .pipe(babel({
-            presets: ['react', 'es2015']
+            presets: ['react', 'es2015'],
+            compact: true
         }))
         .on('error', errorLog)
         .pipe(uglify())
