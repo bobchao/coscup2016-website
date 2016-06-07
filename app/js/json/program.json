@@ -1,0 +1,341 @@
+
+[
+    {
+        "slot": "K0",
+        "room": "R0",
+        "cross": 1,
+        "subject": "Sample",
+        "speakername": "Sample",
+        "type": 5,
+        "lang": "EN"
+    },
+    {
+        "slot": "K1",
+        "room": "R0",
+        "cross": 1
+    },
+    {
+        "slot": "R01",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R11",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R21",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H01",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H11",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "R02",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R12",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R22",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H02",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H12",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "HP1",
+        "room": "HP",
+        "cross": 0,
+        "subject": "3DP 嘉年華"
+    },
+    {
+        "slot": "H21",
+        "room": "H2",
+        "cross": 0
+    },
+    {
+        "slot": "H31",
+        "room": "H3",
+        "cross": 0
+    },
+    {
+        "slot": "H41",
+        "room": "H4",
+        "cross": 0
+    },
+    {
+        "slot": "R03",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R13",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R23",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H03",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H13",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "R04",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R14",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R24",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H04",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H14",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "R05",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R15",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R25",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H05",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H15",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "HP2",
+        "room": "HP",
+        "cross": 0,
+        "subject": "3DP 嘉年華"
+    },
+    {
+        "slot": "H22",
+        "room": "H2",
+        "cross": 0
+    },
+    {
+        "slot": "H32",
+        "room": "H3",
+        "cross": 0
+    },
+    {
+        "slot": "H42",
+        "room": "H4",
+        "cross": 0
+    },
+    {
+        "slot": "K2",
+        "room": "R0",
+        "cross": 1
+    },
+    {
+        "slot": "K3",
+        "room": "R0",
+        "cross": 1
+    },
+    {
+        "slot": "R06",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R16",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R26",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H06",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H16",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "R07",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R17",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R27",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H07",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H17",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "HP3",
+        "room": "HP",
+        "cross": 0,
+        "subject": "Unconf"
+    },
+    {
+        "slot": "H23",
+        "room": "H2",
+        "cross": 0
+    },
+    {
+        "slot": "H33",
+        "room": "H3",
+        "cross": 0
+    },
+    {
+        "slot": "H43",
+        "room": "H4",
+        "cross": 0
+    },
+    {
+        "slot": "R08",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R18",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R28",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H08",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H18",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "R09",
+        "room": "R0",
+        "cross": 0
+    },
+    {
+        "slot": "R19",
+        "room": "R1",
+        "cross": 0
+    },
+    {
+        "slot": "R29",
+        "room": "R2",
+        "cross": 0
+    },
+    {
+        "slot": "H09",
+        "room": "H0",
+        "cross": 0
+    },
+    {
+        "slot": "H19",
+        "room": "H1",
+        "cross": 0
+    },
+    {
+        "slot": "HP4",
+        "room": "HP",
+        "cross": 0,
+        "subject": "Unconf"
+    },
+    {
+        "slot": "H24",
+        "room": "H2",
+        "cross": 0
+    },
+    {
+        "slot": "H34",
+        "room": "H3",
+        "cross": 0
+    },
+    {
+        "slot": "H44",
+        "room": "H4",
+        "cross": 0
+    },
+    {
+        "slot": "K4",
+        "room": "R0",
+        "cross": 1
+    }
+]
