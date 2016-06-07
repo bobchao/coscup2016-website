@@ -147,7 +147,25 @@ nav[role="banner"].banner-rwd-900  {
 }
 
 nav[role="banner"].banner-rwd-900  {
-    
+
+    // COSCUP logo, slogan
+    & > header {
+        width         : 80%;
+
+        img[role="logo"] {
+            display   : none;
+        }
+        strong {
+            display   : none;
+        }
+        img[role="slogan"] {
+            margin-top: 1em;
+        }
+        img[role="up-hero-line"] {
+            display   : none;
+        }
+    }
+
     // Bugar button
     [role="bugar-button"] {
         display  : block;
