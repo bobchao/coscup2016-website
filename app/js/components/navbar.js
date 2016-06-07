@@ -103,7 +103,8 @@ var Navbar = React.createClass({
     navbarAdjust: function() {
         var navbarHeight = ReactDOM.findDOMNode(this).offsetHeight;
         var linksHeight = ReactDOM.findDOMNode(this.refs.links).offsetHeight;
-        if(scroller.top() > navbarHeight - linksHeight){
+        if( this.state.cName !== ''
+            || scroller.top() > navbarHeight - linksHeight){
             ReactDOM.findDOMNode(this.refs.links).style.position = "fixed";
             ReactDOM.findDOMNode(this.refs.links).style.top = "0px";
         } else {
