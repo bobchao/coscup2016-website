@@ -105,6 +105,7 @@ nav[role="banner"] {
 
     // Language switch button
     nav[role="lang-switch"] {
+        position    : relative;
         width       : 100%;
         margin-top  : .8em;
         text-align  : center;
