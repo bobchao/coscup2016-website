@@ -1,6 +1,7 @@
 // Include library
 require('lib/arrayExtended.js');
 var React     = require('react');
+var ReactDOM  = require('react-dom');
 var dom       = require('lib/dom.js');
 
 // Include dependency
@@ -57,8 +58,8 @@ var Links = React.createClass({
         this.setState({lang: langStore.getState()});
     },
     scrollHandler: function() {
+        console.log(ReactDOM.findDOMNode(this).offsetHeight);
         this.setState({top: scroller.top()});
-        console.log(React);
     },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
