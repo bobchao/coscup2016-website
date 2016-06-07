@@ -4,7 +4,7 @@ var Seperator = React.createClass({
     render: function() {
         return (
             <img role="seperator" 
-                 src="images/seperator.jpg"/>
+                 src="images/divider.svg"/>
         );
     }
 });

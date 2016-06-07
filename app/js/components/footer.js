@@ -18,7 +18,7 @@ var SocialNetworkLink = React.createClass({
         return (
             <a href={this.props.href}
                target="_blank">
-                <img src={"images/icon-"+this.props.name+".png"}
+                <img src={"images/icon-"+this.props.name+".svg"}
                      alt={this.props.name} />
             </a>
         );
@@ -46,7 +46,7 @@ var Footer = React.createClass({
                         name="flickr"
                         href="https://www.flickr.com/people/coscup" />
                     <SocialNetworkLink
-                        name="google-plus"
+                        name="google"
                         href="https://plus.google.com/+coscup/posts" />
                     <SocialNetworkLink
                         name="plurk"
