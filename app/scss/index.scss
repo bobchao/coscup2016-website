@@ -55,6 +55,9 @@ main {
                 bottom    : 0;
                 font-size : $font_base;
                 word-spacing: 1em;
+                &:hover {
+                    text-decoration: underline;
+                }
                 @include tablet() {
                     position: static;
                 }
