@@ -9,6 +9,40 @@ nav[role="banner"] {
     background-position  : 0% 0%;
     background-repeat    : no-repeat;
 
+    // COSCUP logo, slogan
+    & > header {
+        display     : block;
+        width       : 30%;
+        margin      : 0 auto;
+
+        img[role="logo"] {
+            display : block; 
+            width   : 30%;
+            margin  : 0 auto;
+        }
+        strong {
+            font-size     : $font_base;
+            display       : block;
+            letter-spacing: .8em;
+            text-indent   : .8em;
+            text-align    : center;
+            color         : $color_green_bg;
+            text-shadow   : 0 0 .3em #908E8E;
+        }
+        img[role="slogan"] {
+            display : block; 
+            width   : 70%;
+            margin  : 0 auto;
+        }
+        img[role="up-hero-line"] {
+            width       : 100%;
+            transform   : rotateX(180deg);
+        }
+        img[role="btn-hero-line"] {
+            width       : 100%;
+        }
+    }
+
     // Each pages' link
     section[role="page-links"] {
         position: absolute;

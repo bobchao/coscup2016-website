@@ -107,11 +107,25 @@ var Navbar = React.createClass({
         var style = {height: this.state.height};
         return (
             <nav role="banner" style={style}>
+                <header>
+                    <img role="up-hero-line"
+                         src="images/hero_line.svg" />
+                    <img role="logo" 
+                         src="images/coscup.svg" />
+                    <strong>開源人年會</strong>
+                    <img role="slogan"
+                         src="images/main_withslogan.svg" />
+                    <img role="btn-hero-line"
+                         src="images/hero_line.svg" />
+                </header>
+
                 <section role="page-links">
                     <Bugar />
                     <Links />
                 </section>
+
                 <LangSwitch />
+
                 <div role="clear-float"></div>
             </nav>
         );
