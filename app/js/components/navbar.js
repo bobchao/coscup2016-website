@@ -58,6 +58,7 @@ var Links = React.createClass({
     },
     scrollHandler: function() {
         this.setState({top: scroller.top()});
+        console.log(React);
     },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
