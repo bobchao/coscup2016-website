@@ -1,6 +1,4 @@
 // Include library
-var assign       = require('object-assign');
-var EventEmitter = require('events').EventEmitter;
 var cookie       = require('lib/cookie.js');
 
 // State of now showing language
@@ -16,9 +14,11 @@ var state = (() => {
     return 'en';
 })();
 
+var registeredCallback = [];
+
 // Button click -> state change -> UI change
 // Inherit nodeJS event library
-var store = assign({}, EventEmitter.prototype, {
+var store = {
     getState: function() {
         return state;
     },
@@ -26,10 +26,7 @@ var store = assign({}, EventEmitter.prototype, {
     // For UI need to be changed whenever state changed
     // to regist their callback
     register: function(callback) {
-        this.on('lang-change', callback);
-    },
-    unregister: function(callback) {
-        this.removeListener('lang-change', callback);
+        registeredCallback.push(callback);
     },
 
     // For button click to change the state
@@ -40,8 +37,13 @@ var store = assign({}, EventEmitter.prototype, {
         else if( newState === 'zh' )
             state = 'zh';
         cookie.insert('lang', state);
-        this.emit('lang-change');
+        this.emit();
+    },
+    emit: function() {
+        registeredCallback.forEach((callback) => {
+            callback();
+        });
     }
-});
+};
 
 module.exports = store;
