@@ -9,9 +9,14 @@ section[role="timetable"] {
     margin   : 8em auto;
 
     table {
+        font-size     : $font_base;
         border-spacing: 0;
         border        : 0;
         width         : 100%;
+        
+        & + table {
+            margin-top: 8em;
+        }
 
         td {
             font-size : $font_base;
@@ -29,25 +34,18 @@ section[role="timetable"] {
                 color    : #666;
             }
         }
+        th {
+            font-size : $font_base;
+            color     : #333;
+        }
+        [role="time-col"] {
+            width     : 10%;
+            text-align: center;
+        }
     }
 }
 
-// sticky header
-[role="timetable-header"] {
-    padding   : .5em 0;
-    background: white;
-
-    & > * {
-        display: inline-block;
-    }
-}
-
-[role="time-col"] {
-    width     : 10%;
-    text-align: center;
-}
-
-
+// style for hssb
 [role="timetabel-hssb"] {
     td[colspan="1"] {
         width : 30%;

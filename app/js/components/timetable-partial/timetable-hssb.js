@@ -1,60 +1,65 @@
 // Include library
-var React     = require('react');
+var React = require('react');
 
 // Include dependency
-var Header = require('components/timetable-partial/timetable-header.js');
-var Slot   = require('components/timetable-partial/timetable-slot.js');
+var langStore = require('stores/lang.js');
+var Slot      = require('components/timetable-partial/timetable-slot.js');
 
-var Tbody = React.createClass({
+var TbodyDay1 = React.createClass({
     render: function() {
-        var data = {};
+        var lang = this.props.lang;
+        var data = this.props.data;
         var time = this.props.timeData;
-        this.props.data.forEach((ele) => {
-            data[ele.slot] = ele;
-        });
+        var room = this.props.roomData;
         return (
             <tbody>
+                <tr>
+                    <th role="time-col">08/20</th>
+                    <th>{room["R0"]["name"+lang]}</th>
+                    <th>{room["R1"]["name"+lang]}</th>
+                    <th>{room["R2"]["name"+lang]}</th>
+                </tr>
                 <tr>
                     <td role="time-col">{time[0]}</td>
                     <td colSpan="3">Opening</td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[1]}</td>
-                    <Slot colSpan="3" data={data["K0"]} />
+                    <Slot colSpan="3" data={data["K0"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[2]}</td>
-                    <Slot data={data["R01"]} />
-                    <Slot data={data["R11"]} />
-                    <Slot data={data["R21"]} />
+                    <Slot data={data["R01"]} lang={lang} />
+                    <Slot data={data["R11"]} lang={lang} />
+                    <Slot data={data["R21"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[3]}</td>
-                    <Slot data={data["R02"]} />
-                    <Slot data={data["R12"]} />
-                    <Slot data={data["R22"]} />
+                    <Slot data={data["R02"]} lang={lang} />
+                    <Slot data={data["R12"]} lang={lang} />
+                    <Slot data={data["R22"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[4]}</td>
-                    <Slot data={data["R03"]} />
-                    <Slot data={data["R13"]} />
-                    <Slot data={data["R23"]} />
+                    <Slot data={data["R03"]} lang={lang} />
+                    <Slot data={data["R13"]} lang={lang} />
+                    <Slot data={data["R23"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[5]}</td>
-                    <Slot data={data["R04"]} />
-                    <Slot data={data["R14"]} />
-                    <Slot data={data["R24"]} />
+                    <Slot data={data["R04"]} lang={lang} />
+                    <Slot data={data["R14"]} lang={lang} />
+                    <Slot data={data["R24"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[6]}</td>
-                    <Slot data={data["R05"]} />
-                    <Slot data={data["R15"]} />
-                    <Slot data={data["R25"]} />
+                    <Slot data={data["R05"]} lang={lang} />
+                    <Slot data={data["R15"]} lang={lang} />
+                    <Slot data={data["R25"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
-                    <Slot colSpan="3" data={data["K1"]} />
+                    <Slot colSpan="3" data={data["K1"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
@@ -69,15 +74,96 @@ var Tbody = React.createClass({
     }
 });
 
+var TbodyDay2 = React.createClass({
+    render: function() {
+        var lang = this.props.lang;
+        var data = this.props.data;
+        var time = this.props.timeData;
+        var room = this.props.roomData;
+        return (
+            <tbody>
+                <tr>
+                    <th role="time-col">08/20</th>
+                    <th>{room["R0"]["name"+lang]}</th>
+                    <th>{room["R1"]["name"+lang]}</th>
+                    <th>{room["R2"]["name"+lang]}</th>
+                </tr>
+                <tr>
+                    <td role="time-col">{time[0]}</td>
+                    <td colSpan="3">Announcement</td>
+                </tr>
+                <tr>
+                    <td role="time-col">{time[1]}</td>
+                    <Slot colSpan="3" data={data["K2"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[2]}</td>
+                    <Slot data={data["R06"]} lang={lang} />
+                    <Slot data={data["R16"]} lang={lang} />
+                    <Slot data={data["R26"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[3]}</td>
+                    <Slot data={data["R07"]} lang={lang} />
+                    <Slot data={data["R17"]} lang={lang} />
+                    <Slot data={data["R27"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[4]}</td>
+                    <Slot data={data["R08"]} lang={lang} />
+                    <Slot data={data["R18"]} lang={lang} />
+                    <Slot data={data["R28"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[5]}</td>
+                    <Slot data={data["R09"]} lang={lang} />
+                    <Slot data={data["R19"]} lang={lang} />
+                    <Slot data={data["R29"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[6]}</td>
+                    <Slot colSpan="3" data={data["K3"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td role="time-col">{time[7]}</td>
+                    <td colSpan="3">Lighting Talk</td>
+                </tr>
+                <tr>
+                    <td role="time-col">{time[8]}</td>
+                    <td colSpan="3">Closing</td>
+                </tr>
+            </tbody>
+        );
+    }
+});
+
 // Implement index page
 var TimetableHSSB = React.createClass({
+    getInitialState: function() {
+        return {lang: langStore.getState()};
+    },
+    changeHandler: function() {
+        this.setState({lang: langStore.getState()});
+    },
+    componentDidMount: function() {
+        langStore.register(this.changeHandler);
+    },
     render: function() {
         return (
             <div role="timetabel-hssb">
-                <Header />
                 <table>
-                    <Tbody data={this.props.data} 
-                           timeData={this.props.timeData} />
+                    <TbodyDay1 
+                        data={this.props.data} 
+                        timeData={this.props.timeData["day1"]} 
+                        roomData={this.props.roomData}
+                        lang={this.state.lang} />
+                </table>
+                <table>
+                    <TbodyDay2
+                        data={this.props.data} 
+                        timeData={this.props.timeData["day2"]} 
+                        roomData={this.props.roomData}
+                        lang={this.state.lang} />
                 </table>
             </div>
         );
