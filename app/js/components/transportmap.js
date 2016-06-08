@@ -23,9 +23,6 @@ var TransportMap = React.createClass({
             return (
                 <section role="transport">
                     <h3 role="title">{transport.title[lang]}
-                        <a>
-                            <img src="images/icon-search.png" />
-                        </a>
                     </h3>
                     <div role="content">{transport.content[lang]}</div>
                 </section>
