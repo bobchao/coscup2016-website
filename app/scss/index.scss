@@ -66,7 +66,7 @@ main {
 
         [role="left"] {
             float         : left;
-            width         : 48%;
+            width         : 45%;
             vertical-align: top;
             @include tablet() {
                 float     : none;
@@ -77,7 +77,7 @@ main {
 
             a {
                 left      : 0;
-                width     : 47%;
+                width     : 45%;
                 @include tablet() {
                     display: block;
                     margin : .8em 0 0 0;
@@ -87,7 +87,7 @@ main {
         }
         [role="right"] {
             float         : right;
-            width         : 48%;
+            width         : 45%;
             vertical-align: top;
             @include tablet() {
                 float     : none;
@@ -97,7 +97,7 @@ main {
             }
             a {
                 right     : 0;
-                width     : 47%;
+                width     : 45%;
                 @include tablet() {
                     display: block;
                     margin : .8em 0 0 0;
