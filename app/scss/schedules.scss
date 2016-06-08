@@ -11,7 +11,8 @@ section[role="timetable"] {
     table {
         font-size     : $font_base;
         border-spacing: 0;
-        border        : 0;
+        background    : #eee;
+        border-top    : .5em solid $color_green_bg;
         width         : 100%;
         
         & + table {
@@ -19,13 +20,17 @@ section[role="timetable"] {
         }
 
         td {
-            font-size : $font_base;
-            padding   : 2em 0;
-            border    : 1px solid white;
-            text-align: center;
-            background: #BDFFC1;
-            color     : #333;
+            font-size    : $font_base;
+            padding      : 2em 0;
+            text-align   : center;
+            border-top   : 2px solid #eee;
+            border-left  : 2px solid #eee;
+            background   : white;
+            color        : #333;
 
+            &:first-child {
+                border-left: 0;
+            }
             header {
                 padding  : 0 1em;
             }
@@ -36,7 +41,9 @@ section[role="timetable"] {
         }
         th {
             font-size : $font_base;
-            color     : #333;
+            background: $color_green_apple;
+            color     : white;
+            padding   : .5em 0;
         }
         [role="time-col"] {
             width     : 10%;

@@ -6,6 +6,7 @@ var TimetableHSSB   = require('components/timetable-partial/timetable-hssb.js');
 var TimetableGYM    = require('components/timetable-partial/timetable-gym.js');
 var TimetableFilter = require('components/timetable-partial/timetable-filter.js');
 
+// Processing data
 var roomData = require('json/room.json');
 var timeData = require('json/time.json');
 var progData = require('json/program.json');
@@ -43,6 +44,7 @@ var Timetable = React.createClass({
     render: function() {
         return (
             <section role="timetable">
+                <TimetableFilter />
                 <TimetableHSSB
                     data={hssbData}
                     timeData={timeData}
@@ -51,7 +53,6 @@ var Timetable = React.createClass({
                     data={gymData} 
                     timeData={timeData}
                     roomData={gymRoom} />
-                <TimetableFilter />
             </section>
         );
     }

@@ -14,7 +14,7 @@ var TbodyDay1 = React.createClass({
         return (
             <tbody>
                 <tr>
-                    <th role="time-col">08/20</th>
+                    <th role="time-col">08 / 20</th>
                     <th>{room["R0"]["name"+lang]}</th>
                     <th>{room["R1"]["name"+lang]}</th>
                     <th>{room["R2"]["name"+lang]}</th>
@@ -83,7 +83,7 @@ var TbodyDay2 = React.createClass({
         return (
             <tbody>
                 <tr>
-                    <th role="time-col">08/20</th>
+                    <th role="time-col">08 / 21</th>
                     <th>{room["R0"]["name"+lang]}</th>
                     <th>{room["R1"]["name"+lang]}</th>
                     <th>{room["R2"]["name"+lang]}</th>
