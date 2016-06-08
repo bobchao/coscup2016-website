@@ -73,9 +73,9 @@ var Tbody = React.createClass({
 var TimetableHSSB = React.createClass({
     render: function() {
         return (
-            <div role="timetabel-body">
+            <div role="timetabel-hssb">
                 <Header />
-                <table role="timetabel-hssb">
+                <table>
                     <Tbody data={this.props.data} 
                            timeData={this.props.timeData} />
                 </table>
