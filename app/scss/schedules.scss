@@ -1,1 +1,58 @@
 @import 'forall/main';
+
+// Container of timetable
+section[role="timetable"] {
+    font-size: $font_base;
+    display  : block;
+    width    : 80%;
+    max-width: 1400px;
+    margin   : 8em auto;
+
+    table {
+        border-spacing: 0;
+        border        : 0;
+        width         : 100%;
+
+        td {
+            font-size : $font_base;
+            padding   : 2em 0;
+            border    : 1px solid white;
+            text-align: center;
+            background: $color_green_bg_hover;
+            color     : white;
+
+            header {
+                padding  : 0 1em;
+            }
+            footer {
+                font-size: $font_small;
+                color    : #ccc;
+                margin   : 0 0 .3em 0;
+            }
+            [role="tag"] {
+                font-size: $font_small;
+            }
+        }
+    }
+}
+
+// sticky 
+[role="timetable-header"] {
+    padding  : 1em 0;
+
+    & > * {
+        display: inline-block;
+    }
+}
+
+[role="time-col"] {
+    width     : 10%;
+    text-align: center;
+}
+
+
+[role="timetabel-hssb"] {
+    td[colspan="1"] {
+        width : 30%;
+    }
+}

@@ -1,341 +1,473 @@
-
 [
     {
         "slot": "K0",
         "room": "R0",
         "cross": 1,
-        "subject": "Sample",
-        "speakername": "Sample",
+        "subject": "BYOC: Build Your Own COSCUP",
+        "speakername": "BobChao",
         "type": 5,
-        "lang": "EN"
+        "lang": "EN",
+        "speakerpic": "",
+        "abstract": "",
+        "speakerintro": ""
     },
     {
         "slot": "K1",
         "room": "R0",
+        "subject": "眾志成城：基進、人本、科學的開放協同議論平台",
+        "speakername": "游知澔",
         "cross": 1
     },
     {
         "slot": "R01",
         "room": "R0",
+        "subject": "中文排版需求以及我在W3C看到的事情",
+        "speakername": "BobbyTung",
         "cross": 0
     },
     {
         "slot": "R11",
         "room": "R1",
+        "subject": "Build your own Embedded Linux distributions by Yocto project",
+        "speakername": "coldnew",
         "cross": 0
     },
     {
         "slot": "R21",
         "room": "R2",
+        "subject": "眾志成城：基進、人本、科學的開放協同議論平台",
+        "speakername": "游知澔",
         "cross": 0
     },
     {
         "slot": "H01",
         "room": "H0",
+        "subject": "PostgreSQL 9.4 and Beyond",
+        "speakername": "snaga",
         "cross": 0
     },
     {
         "slot": "H11",
         "room": "H1",
+        "subject": "Women Techmakers",
+        "speakername": "林筱玫",
         "cross": 0
     },
     {
         "slot": "R02",
         "room": "R0",
+        "subject": "線路組發展現況",
+        "speakername": "David",
         "cross": 0
     },
     {
         "slot": "R12",
         "room": "R1",
+        "subject": "PIME - 用 \"Python\" 快速開發 Windows 的中文輸入法",
+        "speakername": "PCMan",
         "cross": 0
     },
     {
         "slot": "R22",
         "room": "R2",
+        "subject": "TinyBoy 3D 打印教育計劃, 只有硬體, 是否足夠?",
+        "speakername": "wanleung",
         "cross": 0
     },
     {
         "slot": "H02",
         "room": "H0",
+        "subject": "使用 PostgreSQL, NoSQL 和 GIS 一次滿足!",
+        "speakername": "Ravi Nataraju",
         "cross": 0
     },
     {
         "slot": "H12",
         "room": "H1",
+        "subject": "Workshop: Laravel Installfest",
+        "speakername": "范聖佑 (Shengyou Fan)",
         "cross": 0
     },
     {
         "slot": "HP1",
         "room": "HP",
+        "subject": "Workshop: Ubuntu Install Workshop",
+        "speakername": "RJ",
         "cross": 0,
         "subject": "3DP 嘉年華"
     },
     {
         "slot": "H21",
         "room": "H2",
+        "subject": "真全端工程師-從硬體到軟體",
+        "speakername": "YuTin",
         "cross": 0
     },
     {
         "slot": "H31",
         "room": "H3",
+        "subject": "Linux 桌面系統在繁體中文資訊化的發展回顧",
+        "speakername": "jserv & 曾政嘉",
         "cross": 0
     },
     {
         "slot": "H41",
         "room": "H4",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R03",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R13",
         "room": "R1",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R23",
         "room": "R2",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "H03",
         "room": "H0",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "H13",
         "room": "H1",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R04",
         "room": "R0",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R14",
         "room": "R1",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R24",
         "room": "R2",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "H04",
         "room": "H0",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "H14",
         "room": "H1",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R05",
         "room": "R0",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R15",
         "room": "R1",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "R25",
         "room": "R2",
+        "subject": "第一次被當就上手",
+        "speakername": "Sunset",
         "cross": 0
     },
     {
         "slot": "H05",
         "room": "H0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H15",
         "room": "H1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "HP2",
         "room": "HP",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0,
         "subject": "3DP 嘉年華"
     },
     {
         "slot": "H22",
         "room": "H2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H32",
         "room": "H3",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H42",
         "room": "H4",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "K2",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 1
     },
     {
         "slot": "K3",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 1
     },
     {
         "slot": "R06",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R16",
         "room": "R1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R26",
         "room": "R2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H06",
         "room": "H0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H16",
         "room": "H1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R07",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R17",
         "room": "R1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R27",
         "room": "R2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H07",
         "room": "H0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H17",
         "room": "H1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "HP3",
         "room": "HP",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0,
         "subject": "Unconf"
     },
     {
         "slot": "H23",
         "room": "H2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H33",
         "room": "H3",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H43",
         "room": "H4",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R08",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R18",
         "room": "R1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R28",
         "room": "R2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H08",
         "room": "H0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H18",
         "room": "H1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R09",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R19",
         "room": "R1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "R29",
         "room": "R2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H09",
         "room": "H0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H19",
         "room": "H1",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "HP4",
         "room": "HP",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0,
         "subject": "Unconf"
     },
     {
         "slot": "H24",
         "room": "H2",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H34",
         "room": "H3",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "H44",
         "room": "H4",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 0
     },
     {
         "slot": "K4",
         "room": "R0",
+        "subject": "Learn how to flunk your subject in 3 steps",
+        "speakername": "Wingemerald",
         "cross": 1
     }
 ]

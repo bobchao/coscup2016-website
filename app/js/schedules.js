@@ -5,6 +5,7 @@ var ReactDOM  = require('react-dom');
 // Include dependency
 var Navbar    = require('components/navbar.js');
 var Seperator = require('components/seperator.js');
+var Timetable = require('components/timetable.js');
 var Sponsors  = require('components/footer-sponsor.js');
 var Footer    = require('components/footer.js');
 
@@ -15,7 +16,7 @@ var Main = React.createClass({
             <div>
                 <Navbar   />
 
-                <strong role="ASAP">ASAP</strong>
+                <Timetable />
 
                 <Seperator />
                 
