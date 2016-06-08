@@ -16,6 +16,7 @@
         "room": "R0",
         "subject": "眾志成城：基進、人本、科學的開放協同議論平台",
         "speakername": "游知澔",
+        "type": 1,
         "cross": 1
     },
     {
@@ -23,6 +24,7 @@
         "room": "R0",
         "subject": "中文排版需求以及我在W3C看到的事情",
         "speakername": "BobbyTung",
+        "type": [2,9],
         "cross": 0
     },
     {
@@ -30,6 +32,7 @@
         "room": "R1",
         "subject": "Build your own Embedded Linux distributions by Yocto project",
         "speakername": "coldnew",
+        "type": [1,4,5,6],
         "cross": 0
     },
     {

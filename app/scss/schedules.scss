@@ -29,9 +29,6 @@ section[role="timetable"] {
                 color    : #ccc;
                 margin   : 0 0 .3em 0;
             }
-            [role="tag"] {
-                font-size: $font_small;
-            }
         }
     }
 }
@@ -54,5 +51,22 @@ section[role="timetable"] {
 [role="timetabel-hssb"] {
     td[colspan="1"] {
         width : 30%;
+    }
+}
+
+// Defined tag style
+[role="tag"] {
+    display      : inline-block;
+    font-size    : $font_small;
+    height       : 1.3em;
+    line-height  : 1.3em;
+    padding      : 0 .6em;
+    margin       : 0 .3em;
+    background   : #333;
+    color        : white;
+    border-radius: .5em;
+
+    &.tag-EN {
+        background: #803232;
     }
 }

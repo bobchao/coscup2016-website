@@ -54,7 +54,7 @@ var Tbody = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
-                    <Slot colSpan="3" data={data["K2"]} />
+                    <Slot colSpan="3" data={data["K1"]} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
