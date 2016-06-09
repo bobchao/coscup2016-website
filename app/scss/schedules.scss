@@ -16,6 +16,11 @@ section[role="timetable"] {
         background    : #eee;
         border-top    : .5em solid $color_green_bg;
         width         : 100%;
+        @media (max-width: 900px){
+            border-left  : 2px solid #eee;
+            border-right : 2px solid #eee;
+            border-bottom: 2px solid #eee;
+        }
         
         & + table {
             margin-top: 4em;
@@ -24,8 +29,6 @@ section[role="timetable"] {
         td {
             font-size    : $font_base;
             text-align   : center;
-            border-top   : 2px solid #eee;
-            border-left  : 2px solid #eee;
             background   : white;
             color        : #333;
             transition   : opacity 300ms $time_quartic;
@@ -34,10 +37,14 @@ section[role="timetable"] {
             @media (max-width: 900px){
                 display: block;
                 padding      : 0 0 2em 0;
+                border: 0px;
             }
             @media (min-width: 900px){
                 display: table-cell;
                 padding      : 2em 0;
+                border: 0px;
+                border-top   : 2px solid #eee;
+                border-left  : 2px solid #eee;
             }
 
             &:first-child {
