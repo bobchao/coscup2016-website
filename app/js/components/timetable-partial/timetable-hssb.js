@@ -97,22 +97,31 @@ var TbodyDay2 = React.createClass({
                     <Slot colSpan="3" data={data["K2"]} lang={lang} />
                 </tr>
                 <tr>
-                    <td role="time-col">{time[2]}</td>
-                    <Slot data={data["R06"]} lang={lang} />
-                    <Slot data={data["R16"]} lang={lang} />
-                    <Slot data={data["R26"]} lang={lang} />
+                    <td   rowSpan="2" role="time-col">{time[2]}</td>
+                    <Slot rowSpan="2" data={data["R06"]} lang={lang} />
+                    <Slot data={data["R161"]} lang={lang} />
+                    <Slot rowSpan="2" data={data["R26"]} lang={lang} />
                 </tr>
                 <tr>
-                    <td role="time-col">{time[3]}</td>
-                    <Slot data={data["R07"]} lang={lang} />
-                    <Slot data={data["R17"]} lang={lang} />
-                    <Slot data={data["R27"]} lang={lang} />
+                    <Slot data={data["R162"]} lang={lang} />
                 </tr>
                 <tr>
-                    <td role="time-col">{time[4]}</td>
-                    <Slot data={data["R08"]} lang={lang} />
-                    <Slot data={data["R18"]} lang={lang} />
-                    <Slot data={data["R28"]} lang={lang} />
+                    <td   rowSpan="2" role="time-col">{time[3]}</td>
+                    <Slot rowSpan="2" data={data["R07"]} lang={lang} />
+                    <Slot data={data["R171"]} lang={lang} />
+                    <Slot rowSpan="2" data={data["R27"]} lang={lang} />
+                </tr>
+                <tr>
+                    <Slot data={data["R172"]} lang={lang} />
+                </tr>
+                <tr>
+                    <td   rowSpan="2" role="time-col">{time[4]}</td>
+                    <Slot rowSpan="2" data={data["R08"]} lang={lang} />
+                    <Slot data={data["R181"]} lang={lang} />
+                    <Slot rowSpan="2" data={data["R28"]} lang={lang} />
+                </tr>
+                <tr>
+                    <Slot data={data["R182"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[5]}</td>
