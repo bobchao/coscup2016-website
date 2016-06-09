@@ -3,9 +3,10 @@ var React     = require('react');
 
 // Include dependency
 require('lib/arrayExtended.js');
+var popup     = require('stores/popup-page.js');
 var langStore = require('stores/lang.js');
-var typeStore   = require('stores/timetable-filter.js');
-var tagName = typeStore.type;
+var typeStore = require('stores/timetable-filter.js');
+var tagName   = typeStore.type;
 
 // Implement index page
 var Slot = React.createClass({
@@ -27,6 +28,9 @@ var Slot = React.createClass({
             lang: langStore.getState(),
             active: this.needActive()
         };
+    },
+    clickHandler: function() {
+        popup.show('');
     },
     langChangeHandler: function() {
         this.setState({lang: langStore.getState()});
@@ -62,7 +66,8 @@ var Slot = React.createClass({
 
         return (
             <td role="timetable-slot" className={cls}
-                colSpan={colSpan} rowSpan={rowSpan}>
+                colSpan={colSpan} rowSpan={rowSpan}
+                onClick={this.clickHandler}>
                 <header>
                     {this.props.data.subject}
                 </header>
