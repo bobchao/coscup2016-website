@@ -35,5 +35,10 @@ gulp.task('js-debug', function(){
             paths: jsPath.include_paths
         }))
         .on('error', errorLog)
+        .pipe(babel({
+            presets: ['react', 'es2015'],
+            compact: true
+        }))
+        .on('error', errorLog)
         .pipe(gulp.dest(jsPath.dst));
 });
