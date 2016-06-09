@@ -25,7 +25,7 @@ var Sponsor = React.createClass({
         return (
             <section role="sponsor">
                 <div role="sponsor-logo">
-                    <a href={data.url}>
+                    <a href={data.url} target="_blank">
                         <img src={data.logoUrl} />
                     </a>
                 </div>
