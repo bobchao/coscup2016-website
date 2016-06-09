@@ -1,6 +1,5 @@
 // Include library
 var React     = require('react');
-var ajax      = require('superagent');
 
 // Include dependency
 var loader    = require('dataloaders/sponsor.js');
@@ -24,54 +23,49 @@ var Sponsor = React.createClass({
 
 var SponsorClass = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState(), datas: []};
+        return {lang: langStore.getState()};
     },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
-        O = this;
-        ajax.get('./json/sponsor.json')
-            .end(function(err, res1){
-                ajax.get('./json/sponsor-class.json')
-                    .end(function(err, res2){
-                            O.setState({datas: loader.equilJoin(JSON.parse(res2.text), JSON.parse(res1.text))});
-                    }.bind(this));
-            }.bind(this));
     },
     render: function() {
-        var data     = this.state.datas[loader.alias[this.props.role]];
-        if(data === undefined){
-            data = {
-                sponsors: [],
-                className: {
-                    en: "",
-                    zh: ""
-                }
-            }
-        }
-        console.log(this.props.role);
+        var data     = this.props.data;
         var lang     = this.state.lang;
         var sponsors = data.sponsors.map((dt,id) => {
             return <Sponsor key={id} dt={dt} lang={lang} />
         });
-        return (<section role={this.props.role}>
-            <header role="sponsor-class">
-                {data.className[lang]}
-            </header>
-            {sponsors}
-        </section>
+        return (
+            <section>
+                <header role="sponsor-class">
+                    {data.className[lang]}
+                </header>
+                {sponsors}
+            </section>
         );
     }
 });
 
 var FooterSponsor = React.createClass({
+    getInitialState: function() {
+        return {loaded: false};
+    },
+    onloadHandler: function() {
+        this.setState({loaded: true});
+    },
+    componentDidMount: function() {
+        loader.register(this.onloadHandler);
+    },
     render: function() {
+        var datas   = loader.getData();
+        var spnsCls = datas.map((dt, id) => {
+            return (<SponsorClass key={id} data={dt} />)
+        });
         return (
             <section role="footer-sponsor">
-                <SponsorClass role="diamon" />
-                <SponsorClass role="golden" />
+                {spnsCls}
             </section>
         );
     }

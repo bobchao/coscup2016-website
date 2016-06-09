@@ -1,0 +1,49 @@
+[role="popup-page"] {
+    display   : none;
+    position  : fixed;
+    font-size: $font_base;
+    width     : 80%;
+    max-width : 1400px;
+    height    : 90%;
+    top       : 50%;
+    left      : 50%;
+    z-index   : 99999;
+    border    : .5em solid $color_green_bg;
+    overflow-y : scroll;
+    transform : translate  (-50%,50%) scale(.9);
+    transform : translate3d(-50%,50%,0) scale(.9);
+    background: white;
+    transition: transform 500ms $time_quartic;
+    will-change: transform;
+
+    &.state1 {
+        display: block;
+    }
+    &.state2 {
+        display: block;
+        transform : translate  (-50%,-50%) scale(.9);
+        transform : translate3d(-50%,-50%,0) scale(.9);
+    }
+    &.state3 {
+        display: block;
+        transform : translate  (-50%,-50%) scale(1);
+        transform : translate3d(-50%,-50%,0) scale(1);
+    }
+    [role="popup-X"] {
+        font-size: $font_medium;
+        position : absolute;
+        top      : 0;
+        left     : 50%;
+        transform: translateX(-50%);
+        height   : 2em;
+        line-height: 2em;
+        font-weight: 900;
+        z-index    : 999;
+        color      : #FF7A7A;
+        cursor     : pointer;
+        font-family: $mono;
+    }
+    [role="popup-content"] {
+        padding-top: 4em;
+    }
+}

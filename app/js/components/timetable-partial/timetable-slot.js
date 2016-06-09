@@ -1,11 +1,14 @@
 // Include library
 var React     = require('react');
+var ReactDOM  = require('react-dom');
 
 // Include dependency
 require('lib/arrayExtended.js');
+var Content   = require('components/timetable-partial/timetable-popup-content.js');
+var popup     = require('stores/popup-page.js');
 var langStore = require('stores/lang.js');
-var typeStore   = require('stores/timetable-filter.js');
-var tagName = typeStore.type;
+var typeStore = require('stores/timetable-filter.js');
+var tagName   = typeStore.type;
 
 // Implement index page
 var Slot = React.createClass({
@@ -27,6 +30,10 @@ var Slot = React.createClass({
             lang: langStore.getState(),
             active: this.needActive()
         };
+    },
+    clickHandler: function() {
+        var dom = ReactDOM.findDOMNode(this.refs["popup-content-src"]);
+        popup.show(dom.innerHTML);
     },
     langChangeHandler: function() {
         this.setState({lang: langStore.getState()});
@@ -62,7 +69,8 @@ var Slot = React.createClass({
 
         return (
             <td role="timetable-slot" className={cls}
-                colSpan={colSpan} rowSpan={rowSpan}>
+                colSpan={colSpan} rowSpan={rowSpan}
+                onClick={this.clickHandler}>
                 <header>
                     {this.props.data.subject}
                 </header>
@@ -70,6 +78,10 @@ var Slot = React.createClass({
                     {this.props.data.speakername}
                 </footer>
                 {tags}
+                <div ref="popup-content-src">
+                    <Content
+                        data={this.props.data} />
+                </div>
             </td>
         );
     }
