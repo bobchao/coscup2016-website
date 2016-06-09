@@ -2,19 +2,19 @@
 var React     = require('react');
 var ReactDOM  = require('react-dom');
 var Remarkable= require('remarkable');
-var ajax      = require('superagent');
 
 // Include dependency
 var Navbar    = require('components/navbar.js');
 var Footer    = require('components/footer.js');
 var langStore = require('stores/lang.js');
-var loader     = require('dataloaders/sponsor.js');
+var loader    = require('dataloaders/sponsor.js');
 
 function markup(text) {
     var md       = new Remarkable();
     var markdown = md.render(text);
     return { __html: markdown};
 }
+
 
 // Implement index page
 var Sponsor = React.createClass({
@@ -62,26 +62,22 @@ var SponsorClass = React.createClass({
 
 var Sponsorlist = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState(), datas: [], sponsor: [], sponsorclass: []};
+        return {lang: langStore.getState(), loaded: false};
     },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
+    onloadHandler: function() {
+        this.setState({loaded: true});
+    },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
-        var O = this;
-        ajax.get('./json/sponsor.json')
-            .end(function(err, res1){
-                ajax.get('./json/sponsor-class.json')
-                    .end(function(err, res2){
-                            O.setState({datas: loader.equilJoin(JSON.parse(res2.text), JSON.parse(res1.text))});
-                    }.bind(this));
-            }.bind(this));
+        loader.register(this.onloadHandler);
     },
     render: function() {
+        var datas  = loader.getData();
         var lang   = this.state.lang;
-        console.log(this.state.datas);
-        var levels = this.state.datas.map(function(level, idx) {
+        var levels = datas.map(function(level, idx) {
             return (
                 <SponsorClass
                     key={idx} 
