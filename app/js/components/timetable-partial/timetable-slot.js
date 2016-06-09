@@ -13,8 +13,6 @@ var tagName   = typeStore.type;
 // Implement index page
 var Slot = React.createClass({
     needActive: function() {
-        if( !this.props.data )
-            return false;
         if( typeStore.filter(-1) )
             return true;
         var types = this.props.data.type || [];

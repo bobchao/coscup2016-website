@@ -10,6 +10,7 @@ ajax.get('http://coscup.org/2016-assets/json/type.json')
         typesData.forEach((ele) => {
             types[ele.type] = ele;
         });
+        loaded = true;
         for(var callback of callbacks)
             callback();
     }.bind(this));
