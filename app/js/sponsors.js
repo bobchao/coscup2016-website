@@ -2,12 +2,13 @@
 var React     = require('react');
 var ReactDOM  = require('react-dom');
 var Remarkable= require('remarkable');
+var ajax      = require('superagent');
 
 // Include dependency
 var Navbar    = require('components/navbar.js');
 var Footer    = require('components/footer.js');
 var langStore = require('stores/lang.js');
-var datas     = require('dataloaders/sponsor.js').getAll();
+var loader     = require('dataloaders/sponsor.js');
 
 function markup(text) {
     var md       = new Remarkable();
@@ -61,17 +62,26 @@ var SponsorClass = React.createClass({
 
 var Sponsorlist = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState()};
+        return {lang: langStore.getState(), datas: [], sponsor: [], sponsorclass: []};
     },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
+        var O = this;
+        ajax.get('./json/sponsor.json')
+            .end(function(err, res1){
+                ajax.get('./json/sponsor-class.json')
+                    .end(function(err, res2){
+                            O.setState({datas: loader.equilJoin(JSON.parse(res2.text), JSON.parse(res1.text))});
+                    }.bind(this));
+            }.bind(this));
     },
     render: function() {
         var lang   = this.state.lang;
-        var levels = datas.map(function(level, idx) {
+        console.log(this.state.datas);
+        var levels = this.state.datas.map(function(level, idx) {
             return (
                 <SponsorClass
                     key={idx} 

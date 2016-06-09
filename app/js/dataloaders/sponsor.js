@@ -1,8 +1,3 @@
-// This module responsible for convert api data
-// to our front-end needed format.
-
-var slotData = require('json/sponsor-class.json');
-var spnsData = require('json/sponsor.json');
 var alias    = {
     "diamon"  : 0,
     "golden"  : 1,
@@ -12,8 +7,7 @@ var alias    = {
     "special" : 5,
     "personal": 6
 };
-
-function equilJoin() {
+function equilJoin(slotData, spnsData) {
     var ret = [];
     slotData.map(function(ele) {
         ret[ele.level] = {
@@ -46,18 +40,7 @@ function equilJoin() {
     });
     return ret;
 }
-
-var apiData = equilJoin();
-
 module.exports = {
-    getType: function(type) {
-        if( typeof apiData[alias[type]] === 'undefined' ) {
-            console.error('Sponsor type undefined');
-            return;
-        }
-        return apiData[alias[type]];
-    },
-    getAll: function() {
-        return apiData;
-    }
-};
+    equilJoin: equilJoin,
+    alias: alias
+}
