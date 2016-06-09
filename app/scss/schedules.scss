@@ -16,11 +16,33 @@ section[role="timetable"] {
         background    : #eee;
         border-top    : .5em solid $color_green_bg;
         width         : 100%;
-       @include tablet() {
+        @include tablet() {
             border-top   : 0;
             border-left  : 2px solid #eee;
             border-right : 2px solid #eee;
             border-bottom: 2px solid #eee;
+        }
+
+        // Fix mobile issue
+        @include tablet() {
+            display: block;
+            width  : 100%;
+            tbody {
+                display: block;
+                width  : 100%;
+            }
+            tr {
+                display: block;
+                width  : 100%;
+            }
+            th {
+                display: block;
+                width  : 100%;
+            }
+            td {
+                display: block;
+                width  : 100%;
+            }
         }
         
         & + table {
