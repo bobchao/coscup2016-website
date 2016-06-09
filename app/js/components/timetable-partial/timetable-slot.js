@@ -1,8 +1,10 @@
 // Include library
 var React     = require('react');
+var ReactDOM  = require('react-dom');
 
 // Include dependency
 require('lib/arrayExtended.js');
+var Content   = require('components/timetable-partial/timetable-popup-content.js');
 var popup     = require('stores/popup-page.js');
 var langStore = require('stores/lang.js');
 var typeStore = require('stores/timetable-filter.js');
@@ -30,7 +32,8 @@ var Slot = React.createClass({
         };
     },
     clickHandler: function() {
-        popup.show('');
+        var dom = ReactDOM.findDOMNode(this.refs["popup-content-src"]);
+        popup.show(dom.innerHTML);
     },
     langChangeHandler: function() {
         this.setState({lang: langStore.getState()});
@@ -75,6 +78,10 @@ var Slot = React.createClass({
                     {this.props.data.speakername}
                 </footer>
                 {tags}
+                <div ref="popup-content-src">
+                    <Content
+                        data={this.props.data} />
+                </div>
             </td>
         );
     }
