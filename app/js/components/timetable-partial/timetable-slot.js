@@ -21,8 +21,11 @@ var Slot = React.createClass({
     render: function() {
         var lang    = this.state.lang;
         var colSpan = this.props.colSpan || 1;
+        var rowSpan = this.props.rowSpan || 1;
 
         // Process tags
+        if( !this.props.data )
+            return (<td></td>);
         var types   = this.props.data.type || [];
         if( !types.isArray )
             types   = [types];
@@ -37,7 +40,7 @@ var Slot = React.createClass({
             tags.push(<span role="tag" className="tag-EN">EN</span>);
 
         return (
-            <td colSpan={colSpan} role="timetable-slot">
+            <td colSpan={colSpan} rowSpan={rowSpan} role="timetable-slot">
                 <header>
                     {this.props.data.subject}
                 </header>
