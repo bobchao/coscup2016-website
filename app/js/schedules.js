@@ -8,6 +8,7 @@ var Seperator = require('components/seperator.js');
 var Timetable = require('components/timetable.js');
 var Sponsors  = require('components/footer-sponsor.js');
 var Footer    = require('components/footer.js');
+var Popup     = require('components/popup-page.js');
 
 // Implement index page
 var Main = React.createClass({
@@ -22,6 +23,8 @@ var Main = React.createClass({
                 
                 <Sponsors />
                 <Footer   />
+
+                <Popup />
             </div>
         );
     }

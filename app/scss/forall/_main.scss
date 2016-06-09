@@ -22,6 +22,9 @@ html {
     height          : 100%;
     background-color: white;
 }
+body {
+    overflow-y      : scroll;
+}
 [role="relative"] {
     position        : relative;
 }
