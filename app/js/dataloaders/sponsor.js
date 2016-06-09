@@ -25,7 +25,7 @@ function equilJoin(slotData, spnsData) {
                 "zh": ele.namezh
             },
             "url": ele.logolink,
-            "logoUrl": ele.logourl,
+            "logoUrl": ' http://coscup.org'+ele.logourl,
             "description": {
                 "en": ele.introen,
                 "zh": ele.introzh
@@ -49,13 +49,13 @@ function procData() {
     callbacks = [];
 }
 
-ajax.get('./json/sponsor.json')
+ajax.get('https://gist.githubusercontent.com/itsneo/7459ce83c35f5f2a31ee00e9fdf356eb/raw/45dcb012298a7742463d7290b45494838c426d9f/sponsor.json')
     .end(function(err, res1) {
         spnsData = JSON.parse(res1.text);
         procData();
     }.bind(this));
 
-ajax.get('./json/sponsor-class.json')
+ajax.get('https://gist.githubusercontent.com/itsneo/0d28924bf140df3d52702f739f6a64dc/raw/7aed372588af2b2d745f3c63fb56b45cb2740318/level.json')
     .end(function(err, res2){
         slotData = JSON.parse(res2.text);
         procData();
