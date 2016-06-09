@@ -16,7 +16,7 @@ section[role="timetable"] {
         background    : #eee;
         border-top    : .5em solid $color_green_bg;
         width         : 100%;
-        @media (max-width: 900px){
+       @include tablet() {
             border-left  : 2px solid #eee;
             border-right : 2px solid #eee;
             border-bottom: 2px solid #eee;
@@ -34,17 +34,15 @@ section[role="timetable"] {
             transition   : opacity 300ms $time_quartic;
             position: relative;
 
-            @media (max-width: 900px){
+            display    : table-cell;
+            padding    : 2em 0;
+            border     : 0px;
+            border-top : 2px solid #eee;
+            border-left: 2px solid #eee;
+            @include tablet() {
                 display: block;
-                padding      : 0 0 2em 0;
-                border: 0px;
-            }
-            @media (min-width: 900px){
-                display: table-cell;
-                padding      : 2em 0;
-                border: 0px;
-                border-top   : 2px solid #eee;
-                border-left  : 2px solid #eee;
+                padding: 0 0 2em 0;
+                border : 0px;
             }
 
             &:first-child {
@@ -56,40 +54,35 @@ section[role="timetable"] {
             div.subject {
                 padding  : 0 1em;
                 color    : rgba(102, 102, 102, 1);
-                @media (max-width: 900px){
+
+                text-align: center;
+                @include tablet() {
                     text-align: left;
-                }
-                @media (min-width: 900px){
-                    text-align: center;
                 }
             }
             div.up.subject{
-                @media (max-width: 900px){
+                display: block;
+                @include tablet() {
                     display: none;
-                }
-                @media (min-width: 900px){
-                    display: block;
                 }
             }
             div.down.subject{
-                @media (max-width: 900px){
+                display: none;
+                @include tablet() {
                     display: block;
-                }
-                @media (min-width: 900px){
-                    display: none;
                 }
             }
             div.speaker {
                 color    : rgba(143, 184, 34, 1);
-                @media (max-width: 900px){
+
+                font-size: $font_small;
+                text-align: center;
+                @include tablet() {
                     text-align: left;
                     font-size: $font_base;
                     padding: 1em;
                 }
-                @media (min-width: 900px){
-                    font-size: $font_small;
-                    text-align: center;
-                }
+
                 position: relative;
                 &:before{
                     content: attr(alt);
@@ -101,7 +94,7 @@ section[role="timetable"] {
                     top: 0em;
                     background-color: rgba(160, 160, 160, 1);
                     color: white;
-                    @media (max-width: 900px){
+                   @include tablet() {
                         display: inline-block;
                     }
                     @media (min-width: 900px){
@@ -116,11 +109,10 @@ section[role="timetable"] {
                 padding: 1em 0;
                 background-color: rgba(100, 100, 100, 1);
                 color: white;
-                @media (max-width: 900px){
+                
+                display: none;
+                @include tablet() {
                     display: block;
-                }
-                @media (min-width: 900px){
-                    display: none;
                 }
             }
         }
@@ -129,12 +121,10 @@ section[role="timetable"] {
             background: $color_green_apple;
             color     : white;
             padding   : .5em 0;
-
-            @media (max-width: 900px){
+            
+            display: table-cell;
+            @include tablet() {
                 display   : none;
-            }
-            @media (min-width: 900px){
-                display: table-cell;
             }
         }
         [role="timetable-slot"] {
@@ -152,29 +142,24 @@ section[role="timetable"] {
         [role="time-col"] {
             width     : 10%;
             text-align: center;
-            @media (max-width: 900px){
+           
+            display: table-cell;
+            @include tablet() {
                 display   : none;
-            }
-            @media (min-width: 900px){
-                display: table-cell;
             }
         }
         th[role="time-col"]{
-            @media (max-width: 900px){
+            display: table-cell;
+            @include tablet() {
                 display   : block;
                 width: 100%;
             }
-            @media (min-width: 900px){
-                display: table-cell;
-            }
         }
         [role="empty-slot"] {
-            @media (max-width: 900px){
+            display: table-cell;
+            background: #eee;
+            @include tablet() {
                 display   : none;
-            }
-            @media (min-width: 900px){
-                display: table-cell;
-                background: #eee;
             }
         }
     }
@@ -183,11 +168,9 @@ section[role="timetable"] {
 // style for hssb
 [role="timetabel-hssb"] {
     td[colspan="1"] {
-        @media (max-width: 900px){
+        width : 30%;
+        @include tablet() {
             width: 100%;
-        }
-        @media (min-width: 900px){
-            width : 30%;
         }
     }
 }
@@ -195,11 +178,9 @@ section[role="timetable"] {
 // style for gym
 [role="timetabel-gym"] {
     td[colspan="1"] {
-        @media (max-width: 900px){
+        width : 90/6 * 1%;
+        @include tablet() {
             width: 100%;
-        }
-        @media (min-width: 900px){
-            width : 90/6 * 1%;
         }
     }
 }
@@ -254,14 +235,11 @@ section[role="timetable"] {
             &.active {
                 color : rgba(51, 51, 51, 1);
             }
-            @media (max-width: 900px){
+            
+            width: auto;
+            @include tablet() {
                 width: 50%;
-                -webkit-box-sizing: border-box;
-                -mox-box-sizing: border-box;
                 box-sizing: border-box;
-            }
-            @media (min-width: 900px){
-                width: auto;
             }
 
             [role="light-box"] {
@@ -300,11 +278,10 @@ section[role="timetable"] {
     &.tag-EN {
         background: #803232;
     }
-    @media (max-width: 900px){
+
+    display: inline-block;
+    @include tablet() {
         display: none;
-    }
-    @media (min-width: 900px){
-        display: inline-block;
     }
 }
 
