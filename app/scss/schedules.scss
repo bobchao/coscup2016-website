@@ -27,9 +27,13 @@ section[role="timetable"] {
             border-left  : 2px solid #eee;
             background   : white;
             color        : #333;
+            transition   : opacity 300ms $time_quartic;
 
             &:first-child {
                 border-left: 0;
+            }
+            &.unactive {
+                opacity  : .2;
             }
             header {
                 padding  : 0 1em;
