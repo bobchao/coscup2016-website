@@ -46,8 +46,9 @@ var Popup = React.createClass({
     render: function() {
         var htmlContent = {__html: this.state.content};
         return (
-            <div role="popup-bg" onClick={this.closeHandler}
-                 className={this.state.cls}>
+            <div>
+                <div role="popup-bg" onClick={this.closeHandler}
+                     className={this.state.cls} />
                 <div role="popup-page" className={this.state.cls}>
                     <span role="popup-X" onClick={this.closeHandler}>X</span>
                     <div role="popup-content" dangerouslySetInnerHTML={htmlContent} />

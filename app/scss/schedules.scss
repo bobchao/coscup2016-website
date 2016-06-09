@@ -102,6 +102,12 @@ section[role="timetable"] {
                 background: #eee;
             }
         }
+        [role="timetable-slot"] {
+            cursor    : pointer;
+            &:hover {
+                background: #eee;
+            }
+        }
         [role="time-col"] {
             width     : 10%;
             text-align: center;
