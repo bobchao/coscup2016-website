@@ -1,72 +1,96 @@
 [
     {
-        "type": 0,
-        "nameen": "Taiwan",
-        "namezh": "開源與台灣"
+        "type": 99,
+        "nameen": "Opening",
+        "namezh": "開幕"
     },
     {
-        "type": 1,
-        "nameen": "Community",
-        "namezh": "社群經驗"
+        "type": 98,
+        "nameen": "Break the Boundaries",
+        "namezh": "跨界"
     },
     {
-        "type": 2,
-        "nameen": "Chinese",
-        "namezh": "中文議題"
+        "type": 97,
+        "nameen": "Lay the Foundations",
+        "namezh": "扎根"
     },
     {
-        "type": 4,
-        "nameen": "Government",
-        "namezh": "開放政府"
+        "type": 96,
+        "nameen": "To inherit",
+        "namezh": "傳承"
     },
     {
-        "type": 5,
-        "nameen": "Open Data",
-        "namezh": "開放資料"
+        "type": 95,
+        "nameen": "Other OpenSouce-related",
+        "namezh": "其他開源相關"
     },
     {
-        "type": 6,
-        "nameen": "Hacking",
-        "namezh": "探究竟"
+        "type": 94
     },
     {
-        "type": 7,
-        "nameen": "Tips",
-        "namezh": "講秘訣"
+        "type": 93
     },
     {
-        "type": 8,
-        "nameen": "Legal",
-        "namezh": "法律議題"
+        "type": 92
     },
     {
-        "type": 9,
-        "nameen": "Education",
-        "namezh": "開源與教育"
+        "type": 91,
+        "nameen": "Unconf",
+        "namezh": "Unconf"
     },
     {
-        "type": 10,
-        "nameen": "Physical",
-        "namezh": "來硬的"
-    },
-    {
-        "type": 11,
-        "nameen": "New",
-        "namezh": "新東西"
-    },
-    {
-        "type": 12,
-        "nameen": "Others",
-        "namezh": "一般議程"
-    },
-    {
-        "type": 13,
-        "nameen": "Unconference",
-        "namezh": "開放議程"
-    },
-    {
-        "type": 14,
+        "type": 90,
         "nameen": "Workshop",
         "namezh": "工作坊"
+    },
+    {
+        "type": 89,
+        "nameen": "Embed",
+        "namezh": "嵌入式"
+    },
+    {
+        "type": 88,
+        "nameen": "IOT",
+        "namezh": "物聯網"
+    },
+    {
+        "type": 87,
+        "nameen": "Open culture/data",
+        "namezh": "開放文化/資料"
+    },
+    {
+        "type": 86,
+        "nameen": "Open source software",
+        "namezh": "開源程式"
+    },
+    {
+        "type": 85,
+        "nameen": "Information security",
+        "namezh": "資訊安全"
+    },
+    {
+        "type": 84,
+        "nameen": "Open source hardware",
+        "namezh": "開源硬體"
+    },
+    {
+        "type": 83,
+        "nameen": "Bussiness & Education",
+        "namezh": "商業、教育"
+    },
+    {
+        "type": 82,
+        "nameen": "Open source application",
+        "namezh": "開源應用"
+    },
+    {
+        "type": 81,
+        "nameen": "Lay the Foundations",
+        "namezh": "札根"
+    },
+    {
+        "type": 80,
+        "nameen": "Open source law",
+        "namezh": "開源法律"
     }
 ]

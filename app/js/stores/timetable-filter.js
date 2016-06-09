@@ -37,7 +37,10 @@ var store = {
     },
     // Map id to tag info
     type: function(id) {
-        return types[id];
+        if( types[id] )
+            return types[id];
+        else
+            return {nameen: '', namezh: ''};
     },
     nowPlace: function() {
         return placeid;
