@@ -1,4 +1,5 @@
 @import 'forall/main';
+@import 'forall/_responsive.scss';
 
 // Container of timetable
 section[role="timetable"] {
@@ -29,6 +30,20 @@ section[role="timetable"] {
             color        : #333;
             transition   : opacity 300ms $time_quartic;
 
+
+
+            @media (max-width: 900px){
+                display: block;
+            }
+            @media (min-width: 900px){
+                display: table-cell;
+            }
+
+            &:before {
+                content : attr(data-th);
+                display : inline-block;
+            }
+
             &:first-child {
                 border-left: 0;
             }
@@ -48,13 +63,32 @@ section[role="timetable"] {
             background: $color_green_apple;
             color     : white;
             padding   : .5em 0;
+
+            @media (max-width: 900px){
+                display   : none;
+            }
+            @media (min-width: 900px){
+                display: table-cell;
+            }
         }
         [role="time-col"] {
             width     : 10%;
             text-align: center;
+            @media (max-width: 900px){
+                display   : none;
+            }
+            @media (min-width: 900px){
+                display: table-cell;
+            }
         }
         [role="empty-slot"] {
-            background: #eee;
+            @media (max-width: 900px){
+                display   : none;
+            }
+            @media (min-width: 900px){
+                display: table-cell;
+                background: #eee;
+            }
         }
     }
 }
@@ -62,14 +96,24 @@ section[role="timetable"] {
 // style for hssb
 [role="timetabel-hssb"] {
     td[colspan="1"] {
-        width : 30%;
+        @media (max-width: 900px){
+            width: 100%;
+        }
+        @media (min-width: 900px){
+            width : 30%;
+        }
     }
 }
 
 // style for gym
 [role="timetabel-gym"] {
     td[colspan="1"] {
-        width : 90/6 * 1%;
+        @media (max-width: 900px){
+            width: 100%;
+        }
+        @media (min-width: 900px){
+            width : 90/6 * 1%;
+        }
     }
 }
 
