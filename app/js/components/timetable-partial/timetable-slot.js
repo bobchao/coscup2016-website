@@ -59,7 +59,7 @@ var Slot = React.createClass({
             types   = [types];
         var tags    = types.map((ele) => {
             return (
-                <span role="tag" className={"tag-"+tagName(ele)}>
+                <span role="tag" className={"tag-"+tagName(ele)['nameen']}>
                     {tagName(ele)['name'+lang]}
                 </span>
             );
