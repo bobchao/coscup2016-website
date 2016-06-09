@@ -31,10 +31,16 @@ section[role="sponsor"] {
 
         a {
             display: inline-block;
-            border : 1px solid #333;
+            opacity: .8;
+            transition: opacity 500ms $time_quartic;
+
+            &:hover {
+                opacity: 1;
+            }
         }
         img {
             width: 100%;
+            max-height: 20em;
         }
     }
     [role="sponsor-text"] {

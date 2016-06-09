@@ -2,7 +2,7 @@
 var React     = require('react');
 
 // Include dependency
-var getData   = require('dataloaders/sponsor.js').getType;
+var loader    = require('dataloaders/sponsor.js');
 var langStore = require('stores/lang.js');
 
 // Implement
@@ -32,13 +32,13 @@ var SponsorClass = React.createClass({
         langStore.register(this.changeHandler);
     },
     render: function() {
-        var data     = getData(this.props.role);
+        var data     = this.props.data;
         var lang     = this.state.lang;
         var sponsors = data.sponsors.map((dt,id) => {
             return <Sponsor key={id} dt={dt} lang={lang} />
         });
         return (
-            <section role={this.props.role}>
+            <section>
                 <header role="sponsor-class">
                     {data.className[lang]}
                 </header>
@@ -49,11 +49,23 @@ var SponsorClass = React.createClass({
 });
 
 var FooterSponsor = React.createClass({
+    getInitialState: function() {
+        return {loaded: false};
+    },
+    onloadHandler: function() {
+        this.setState({loaded: true});
+    },
+    componentDidMount: function() {
+        loader.register(this.onloadHandler);
+    },
     render: function() {
+        var datas   = loader.getData();
+        var spnsCls = datas.map((dt, id) => {
+            return (<SponsorClass key={id} data={dt} />)
+        });
         return (
             <section role="footer-sponsor">
-                <SponsorClass role="diamon" />
-                <SponsorClass role="golden" />
+                {spnsCls}
             </section>
         );
     }

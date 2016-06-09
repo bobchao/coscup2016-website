@@ -2,14 +2,16 @@
     display   : none;
     position  : fixed;
     font-size: $font_base;
-    width     : 100%;
-    height    : 100%;
-    top       : 0;
-    left      : 0;
+    width     : 80%;
+    max-width : 1400px;
+    height    : 90%;
+    top       : 50%;
+    left      : 50%;
     z-index   : 99999;
+    border    : .5em solid $color_green_bg;
     overflow-y : scroll;
-    transform : translateY(100%);
-    transform : translate3d(0,100%,0);
+    transform : translate  (-50%,50%) scale(.9);
+    transform : translate3d(-50%,50%,0) scale(.9);
     background: white;
     transition: transform 500ms $time_quartic;
     will-change: transform;
@@ -19,8 +21,13 @@
     }
     &.state2 {
         display: block;
-        transform : translateY(0);
-        transform : translate3d(0,0,0);
+        transform : translate  (-50%,-50%) scale(.9);
+        transform : translate3d(-50%,-50%,0) scale(.9);
+    }
+    &.state3 {
+        display: block;
+        transform : translate  (-50%,-50%) scale(1);
+        transform : translate3d(-50%,-50%,0) scale(1);
     }
     [role="popup-X"] {
         font-size: $font_medium;
@@ -35,5 +42,8 @@
         color      : #FF7A7A;
         cursor     : pointer;
         font-family: $mono;
+    }
+    [role="popup-content"] {
+        padding-top: 4em;
     }
 }

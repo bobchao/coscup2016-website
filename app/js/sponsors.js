@@ -7,13 +7,14 @@ var Remarkable= require('remarkable');
 var Navbar    = require('components/navbar.js');
 var Footer    = require('components/footer.js');
 var langStore = require('stores/lang.js');
-var datas     = require('dataloaders/sponsor.js').getAll();
+var loader    = require('dataloaders/sponsor.js');
 
 function markup(text) {
     var md       = new Remarkable();
     var markdown = md.render(text);
     return { __html: markdown};
 }
+
 
 // Implement index page
 var Sponsor = React.createClass({
@@ -24,7 +25,7 @@ var Sponsor = React.createClass({
         return (
             <section role="sponsor">
                 <div role="sponsor-logo">
-                    <a href={data.url}>
+                    <a href={data.url} target="_blank">
                         <img src={data.logoUrl} />
                     </a>
                 </div>
@@ -61,15 +62,20 @@ var SponsorClass = React.createClass({
 
 var Sponsorlist = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState()};
+        return {lang: langStore.getState(), loaded: false};
     },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
+    onloadHandler: function() {
+        this.setState({loaded: true});
+    },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
+        loader.register(this.onloadHandler);
     },
     render: function() {
+        var datas  = loader.getData();
         var lang   = this.state.lang;
         var levels = datas.map(function(level, idx) {
             return (
