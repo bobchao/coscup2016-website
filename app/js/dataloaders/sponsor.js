@@ -1,15 +1,14 @@
-var alias    = {
-    "diamon"  : 0,
-    "golden"  : 1,
-    "silver"  : 2,
-    "bronze"  : 3,
-    "cohost"  : 4,
-    "special" : 5,
-    "personal": 6
-};
+var ajax     = require('superagent');
+
+var spnsData = null;
+var slotData = null;
+var finalData = [];
+
+var callbacks = [];
+
 function equilJoin(slotData, spnsData) {
     var ret = [];
-    slotData.map(function(ele) {
+    slotData.forEach(function(ele) {
         ret[ele.level] = {
             "className": {
                 "en": ele.nameen,
@@ -18,7 +17,7 @@ function equilJoin(slotData, spnsData) {
             "sponsors": []
         };
     });
-    spnsData.map(function(ele) {
+    spnsData.forEach(function(ele) {
         ret[ele.level].sponsors.push({
             "place": ele.place,
             "name": {
@@ -40,7 +39,36 @@ function equilJoin(slotData, spnsData) {
     });
     return ret;
 }
-module.exports = {
-    equilJoin: equilJoin,
-    alias: alias
+
+function procData() {
+    if( !slotData || !spnsData )
+        return;
+    finalData = equilJoin(slotData, spnsData);
+    for(var callback of callbacks)
+        callback();
+    callbacks = [];
 }
+
+ajax.get('./json/sponsor.json')
+    .end(function(err, res1) {
+        spnsData = JSON.parse(res1.text);
+        procData();
+    }.bind(this));
+
+ajax.get('./json/sponsor-class.json')
+    .end(function(err, res2){
+        slotData = JSON.parse(res2.text);
+        procData();
+    }.bind(this));
+
+module.exports = {
+    getData: function() {
+        return finalData;
+    },
+    register: function(callback) {
+        if( finalData.length>0 )
+            callback();
+        else
+            callbacks.push(callback);
+    }
+};
