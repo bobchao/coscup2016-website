@@ -30,7 +30,32 @@ section[role="timetable"] {
             background   : white;
             color        : #333;
             transition   : opacity 300ms $time_quartic;
-
+            position: relative;
+            &:before{
+                content: attr(alt);
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                padding: .3em;
+                @media (max-width: 900px){
+                    display: inline-block;
+                }
+                @media (min-width: 900px){
+                    display: none;
+                }
+            }
+            &[alt="R0"]:before{
+                background-color: red;
+            }
+            &[alt="R1"]:before{
+                background-color: blue;
+            }
+            &[alt="R2"]:before{
+                background-color: blue;
+            }
+            &[alt="R3"]:before{
+                background-color: blue;
+            }
 
 
             @media (max-width: 900px){
@@ -38,11 +63,6 @@ section[role="timetable"] {
             }
             @media (min-width: 900px){
                 display: table-cell;
-            }
-
-            &:before {
-                content : attr(data-th);
-                display : inline-block;
             }
 
             &:first-child {

@@ -67,10 +67,13 @@ var Slot = React.createClass({
         if( this.props.data.lang === "EN" )
             tags.push(<span role="tag" className="tag-EN">EN</span>);
 
+        var alt = this.props.data.slot[0] == 'K' ? "Keynote" : this.props.data.room.substr(0, 2);
         return (
             <td role="timetable-slot" className={cls}
                 colSpan={colSpan} rowSpan={rowSpan}
-                onClick={this.clickHandler}>
+                onClick={this.clickHandler}
+                alt={alt}
+                >
                 <header>
                     {this.props.data.subject}
                 </header>
