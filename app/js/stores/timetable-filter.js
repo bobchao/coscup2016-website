@@ -1,9 +1,7 @@
 // map id to tag info
-var typesData = require('json/type.json');
-var types     = {};
-typesData.forEach((ele) => {
-    types[ele.type] = ele;
-});
+var loader = require('dataloaders/schedules-filter.js');
+var types  = {};
+
 var placesData = [
     {id: 0, en: "Academia Sinica", zh: "人文館"},
     {id: 1, en: "Activity Center", zh: "活動中心"}
@@ -78,5 +76,10 @@ var store = {
             callback(placeid);
     }
 };
+
+loader.register(function() {
+    types = loader.getTypes();
+    store.emitFilterChange();
+});
 
 module.exports = store;

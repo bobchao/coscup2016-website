@@ -2,6 +2,7 @@
 var React     = require('react');
 
 // Include dependency
+var loader    = require('dataloaders/schedules-filter.js');
 var langStore = require('stores/lang.js');
 var typeStore = require('stores/timetable-filter.js');
 
@@ -68,11 +69,15 @@ var TimetableFilter = React.createClass({
     getInitialState: function() {
         return {lang: langStore.getState()};
     },
+    typesOnloadHandler: function() {
+        this.forceUpdate();
+    },
     changeHandler: function() {
         this.setState({lang: langStore.getState()});
     },
     componentDidMount: function() {
         langStore.register(this.changeHandler);
+        loader.register(this.typesOnloadHandler);
     },
     render: function() {
         var lang  = this.state.lang;
