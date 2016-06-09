@@ -17,6 +17,7 @@ section[role="timetable"] {
         border-top    : .5em solid $color_green_bg;
         width         : 100%;
        @include tablet() {
+            border-top   : 0;
             border-left  : 2px solid #eee;
             border-right : 2px solid #eee;
             border-bottom: 2px solid #eee;
@@ -41,8 +42,8 @@ section[role="timetable"] {
             border-left: 2px solid #eee;
             @include tablet() {
                 display: block;
-                padding: 0 0 2em 0;
-                border : 0px;
+                border-left: 0px;
+                padding: 0 0 1em 0;
             }
 
             &:first-child {
@@ -127,6 +128,11 @@ section[role="timetable"] {
                 display   : none;
             }
         }
+        [role="hardcode-col"] {
+            @include tablet() {
+                padding: 1em 0;
+            }
+        }
         [role="timetable-slot"] {
             cursor    : pointer;
             &:hover {
@@ -145,14 +151,22 @@ section[role="timetable"] {
            
             display: table-cell;
             @include tablet() {
-                display   : none;
+                display: block;
+                width  : 100%;   
+                padding: 1em 0;
+                background-color: rgba(100, 100, 100, 1);
+                color: white;
             }
         }
         th[role="time-col"]{
             display: table-cell;
             @include tablet() {
-                display   : block;
-                width: 100%;
+                display: block;
+                width  : 100%;   
+                padding: 1em 0;
+                color  : white;
+                background-color: $color_green_bg;
+                border-top      : 0;
             }
         }
         [role="empty-slot"] {

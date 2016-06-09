@@ -24,7 +24,7 @@ var TbodyDay1 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[0]}</td>
-                    <td colSpan="2">Opening</td>
+                    <td colSpan="2" role="hardcode-col">Opening</td>
                     <Slot rowSpan="4" data={data["HP1"]} lang={lang} />
                     <Slot rowSpan="4" data={data["H21"]} lang={lang} />
                     <Slot rowSpan="4" data={data["H31"]} lang={lang} />
@@ -67,11 +67,11 @@ var TbodyDay1 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
-                    <td colSpan="2">Lighting Talk</td>
+                    <td colSpan="2" role="hardcode-col">Lighting Talk</td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[9]}</td>
-                    <td colSpan="2">BoF Announcement</td>
+                    <td colSpan="2" role="hardcode-col">BoF Announcement</td>
                 </tr>
             </tbody>
         );
@@ -97,7 +97,7 @@ var TbodyDay2 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[0]}</td>
-                    <td colSpan="2">Announcement</td>
+                    <td colSpan="2" role="hardcode-col">Announcement</td>
                     <td rowSpan="2" role="empty-slot"></td>
                     <Slot rowSpan="4" data={data["H23"]} lang={lang}></Slot>
                     <Slot rowSpan="4" data={data["H33"]} lang={lang}></Slot>
