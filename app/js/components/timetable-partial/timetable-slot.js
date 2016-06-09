@@ -72,14 +72,19 @@ var Slot = React.createClass({
             <td role="timetable-slot" className={cls}
                 colSpan={colSpan} rowSpan={rowSpan}
                 onClick={this.clickHandler}
-                alt={alt}
                 >
-                <header>
+                <div className="rwd-time">
+                    09:30 - 10:10
+                </div>
+                <div className="subject up">
                     {this.props.data.subject}
-                </header>
-                <footer>
+                </div>
+                <div className="speaker" alt={alt}>
                     {this.props.data.speakername}
-                </footer>
+                </div>
+                <div className="subject down">
+                    {this.props.data.subject}
+                </div>
                 {tags}
                 <div ref="popup-content-src">
                     <Content
