@@ -19,3 +19,11 @@ div[role="transport-text-info"] {
     max-width: 800px;
     margin   : 2em auto 0 auto;
 }
+
+div[role="transportmap"]{
+    height: 600px;
+    @include tablet() {
+        height: 300px;
+        padding: 3em;
+    }
+}
