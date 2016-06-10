@@ -287,12 +287,22 @@ section[role="timetable"] {
     }
     [role="filter-rwd"] {
         display    : none;
+        position   : relative;
         padding    : 1em;
         text-align : center;
         cursor     : pointer;
         background : #80c269;
         color      : white;
         border-radius: .3em;
+        & > img {
+            display : block;
+            position: absolute;
+            right   : .5em;
+            top     : 50%;
+            width   : 1em;
+            transform : translateY(-50%) rotateX(180deg);
+            transition: transform 500ms $time_quartic;
+        }
     }
     @media screen and (max-width: 600px) {
         footer {
@@ -301,8 +311,13 @@ section[role="timetable"] {
         [role="filter-rwd"] {
             display: block;
         }
-        [role="filter-rwd"].active ~ footer {
-            display: block;
+        [role="filter-rwd"].active {
+            & > img {
+                transform: translateY(-50%) rotateX(0);
+            }
+            & ~ footer {
+                display: block;
+            }
         }
     }
 }

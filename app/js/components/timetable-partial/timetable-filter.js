@@ -109,6 +109,7 @@ var TimetableFilter = React.createClass({
                 <div role="filter-rwd" className={rwdCls}
                      onClick={this.onclickHandler}>
                     Filter
+                    <img src="images/arrow.png" />
                 </div>
                 <footer>
                     {tags}
