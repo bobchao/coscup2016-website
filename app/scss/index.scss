@@ -52,6 +52,12 @@ main {
                 &:hover {
                     color     : rgba(255,255,255,1);
                 }
+                &[href=""],
+                &[href=""]:hover {
+                    color     : rgba(255,255,255,.6);
+                    cursor    : pointer;
+                    pointer-events: none;
+                }
             }
         }
 

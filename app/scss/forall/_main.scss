@@ -48,6 +48,9 @@ a[role="link-btn"] {
     text-align      : center;
     border-radius   : 2em;
     text-decoration : none;
+    &[href=""]:hover {
+        pointer-events: none;
+    }
 }
 
 [role="ASAP"] {
