@@ -2,6 +2,7 @@
 var React     = require('react');
 
 // Include dependency
+var Seperator = require('components/seperator.js');
 var loader    = require('dataloaders/sponsor.js');
 var langStore = require('stores/lang.js');
 
@@ -66,6 +67,13 @@ var FooterSponsor = React.createClass({
         return (
             <section role="footer-sponsor">
                 {spnsCls}
+
+                <Seperator />
+
+                <article role="explain-sponsor">
+                    <h2>贊助 COSCUP</h2>
+                    <p>如果您欲贊助 COSCUP，請與 <a href="mailto: sponsorship@coscup.org">sponsorship@coscup.org</a> 聯絡。</p>
+                </article>
             </section>
         );
     }

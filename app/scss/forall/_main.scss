@@ -53,6 +53,23 @@ a[role="link-btn"] {
     }
 }
 
+[role="explain-sponsor"] {
+    display   : block;
+    margin    : 4em auto;
+    font-size : $font_base;
+    h2 {
+        text-align: center;
+        color     : $color_green_bg;
+    }
+    p {
+        text-align: center;
+        color     : #333;
+    }
+    a {
+        color     : $color_green_bg_hover;
+    }
+}
+
 [role="ASAP"] {
     display         : block;
     font-size       : $font_large;

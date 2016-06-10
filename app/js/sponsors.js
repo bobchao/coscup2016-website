@@ -6,6 +6,7 @@ var Remarkable= require('remarkable');
 // Include dependency
 var Navbar    = require('components/navbar.js');
 var Footer    = require('components/footer.js');
+var Seperator = require('components/seperator.js');
 var langStore = require('stores/lang.js');
 var loader    = require('dataloaders/sponsor.js');
 
@@ -101,9 +102,11 @@ var Main = React.createClass({
 
                 <Sponsorlist />
 
-                <section role="sponsor-link">
-                    <header> 贊助COSCUP </header>
-                    <div> 如果您欲贊助 COSCUP，請與 <a href="mailto: sponsorship@coscup.org">sponsorship@coscup.org</a> 聯絡。</div> 
+                <Seperator />
+
+                <section role="explain-sponsor">
+                    <h2> 贊助COSCUP </h2>
+                    <p> 如果您欲贊助 COSCUP，請與 <a href="mailto: sponsorship@coscup.org">sponsorship@coscup.org</a> 聯絡。</p> 
                 </section>
 
 
