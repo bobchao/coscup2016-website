@@ -35,13 +35,12 @@ main {
         padding    : 0 0 3em 0;
 
         article {
+            color     : #333;
             h2 {
                 font-size : $font_medium;
                 text-align: center;
                 margin    : 0 0 .5em 0;
-            }
-            p {
-                color     : #333;
+                color     : #517862;
             }
             a {
                 bottom    : 0;
