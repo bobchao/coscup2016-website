@@ -3,6 +3,8 @@
 ## TODO
 - 建議網頁可以產生 jsonld，[參考](https://github.com/g0v/summit.g0v.tw/blob/2016/jld.js)
 - 議程表 filter 作 sticky 版
+- 部份文字需要 `text-align: justify;`
+- 交通頁面地圖資訊與 RWD 可優化
 
 ## 環境準備
 npm 版本過舊可能會導致之後 build 失敗  
