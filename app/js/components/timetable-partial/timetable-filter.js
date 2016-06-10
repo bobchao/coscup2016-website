@@ -69,7 +69,14 @@ var FilterBtn = React.createClass({
 
 var TimetableFilter = React.createClass({
     getInitialState: function() {
-        return {lang: langStore.getState()};
+        return {
+            lang: langStore.getState(),
+            filterRwdCls: ''
+        };
+    },
+    onclickHandler: function() {
+        var nCls = (this.state.filterRwdCls=='')? 'active' : '';
+        this.setState({filterRwdCls: nCls})
     },
     typesOnloadHandler: function() {
         this.forceUpdate();
@@ -84,6 +91,7 @@ var TimetableFilter = React.createClass({
     render: function() {
         var lang  = this.state.lang;
         var place = typeStore.getAllPlaces();
+        var rwdCls= this.state.filterRwdCls;
         var tags  = [];
         var types = typeStore.getAllTypes();
         for(var id in types)
@@ -97,6 +105,11 @@ var TimetableFilter = React.createClass({
                     <PlaceBtn role="right-btn" data={place[1]} lang={lang} />
                     <div role="clear-float"></div>
                 </header>
+
+                <div role="filter-rwd" className={rwdCls}
+                     onClick={this.onclickHandler}>
+                    Filter
+                </div>
                 <footer>
                     {tags}
                 </footer>

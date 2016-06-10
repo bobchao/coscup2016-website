@@ -285,6 +285,26 @@ section[role="timetable"] {
             }
         }
     }
+    [role="filter-rwd"] {
+        display    : none;
+        padding    : 1em;
+        text-align : center;
+        cursor     : pointer;
+        background : #80c269;
+        color      : white;
+        border-radius: .3em;
+    }
+    @media screen and (max-width: 600px) {
+        footer {
+            display: none;
+        }
+        [role="filter-rwd"] {
+            display: block;
+        }
+        [role="filter-rwd"].active ~ footer {
+            display: block;
+        }
+    }
 }
 
 // Defined table tag style
