@@ -49,7 +49,9 @@ var TbodyDay1 = React.createClass({
                     <Slot data={data["H03"]} lang={lang} />
                     <Slot data={data["H13"]} lang={lang} />
                     <Slot rowSpan="3" data={data["HP2"]} lang={lang} />
-                    <Slot rowSpan="3" colSpan="3" data={data["H22"]} lang={lang} />
+                    <Slot rowSpan="3" data={data["H21"]} lang={lang} />
+                    <Slot rowSpan="3" data={data["H22"]} lang={lang} />
+                    <Slot rowSpan="3" data={data["H23"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[5]}</td>
