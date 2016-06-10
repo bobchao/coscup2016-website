@@ -40,7 +40,7 @@ var Popup = React.createClass({
     componentDidMount: function() {
         store.addStep(this.proc0, 20);
         store.addStep(this.proc1, 20);
-        store.addStep(this.proc2, 400);
+        store.addStep(this.proc2, 300);
         store.addStep(this.proc3, 300);
     },
     render: function() {

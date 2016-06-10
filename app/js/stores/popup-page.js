@@ -2,7 +2,7 @@ require('lib/requestAnimationFrame.js');
 
 var content = null;
 var callbacks = [];
-var delays    = [];
+var durations = [];
 
 function forward(nowid) {
     window.requestAnimationFrame(callbacks[nowid]);
@@ -10,7 +10,7 @@ function forward(nowid) {
         return;
     setTimeout(function() {
         forward(nowid+1);
-    }, delays[nowid]);
+    }, durations[nowid]);
 }
 
 function backward(nowid) {
@@ -19,7 +19,7 @@ function backward(nowid) {
         return;
     setTimeout(function() {
         backward(nowid-1);
-    }, delays[nowid+1]);   
+    }, durations[nowid+1]);   
 }
 
 module.exports = {
@@ -33,8 +33,8 @@ module.exports = {
     close: function() {
         backward(callbacks.length - 1);
     },
-    addStep: function(callback, delay) {
+    addStep: function(callback, duration) {
         callbacks.push(callback);
-        delays   .push(delay || 0);
+        durations.push(duration || 0);
     }
 }
