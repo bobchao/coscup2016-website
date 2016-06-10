@@ -3,6 +3,9 @@
 section[role="transport"] {
     font-size       : $font_base;
     padding         : 1em 0;
+    @include tablet() {
+        padding: 3em;
+    }
     a {
         margin-left: 1em;
         img {
