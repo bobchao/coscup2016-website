@@ -53,9 +53,11 @@ var FilterBtn = React.createClass({
         typeStore.filterToggle(this.props.data.type);
     },
     render: function() {
-        var data = this.props.data;
+        var data = this.props.data || {};
         var lang = this.props.lang;
         var clk  = (this.state.active)? 'active' : '';
+        if( !data['name'+lang] || data['name'+lang]=='' )
+            clk  = 'hide';
         return (
             <span onClick={this.clickHandler} className={clk}>
                 <div role="light-box"></div>

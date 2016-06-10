@@ -244,6 +244,9 @@ section[role="timetable"] {
             background: white;
             cursor    : pointer;
             transition: color 300ms $time_quartic;
+            &.hide {
+                display: none;
+            }
             &:hover,
             &.active {
                 color : rgba(51, 51, 51, 1);
