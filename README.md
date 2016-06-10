@@ -1,5 +1,9 @@
 # coscup 2016 website
 
+## TODO
+- 建議網頁可以產生 jsonld，[參考](https://github.com/g0v/summit.g0v.tw/blob/2016/jld.js)
+- 議程表 filter 作 sticky 版
+
 ## 環境準備
 npm 版本過舊可能會導致之後 build 失敗  
 [更新 node, npm 參考資料](https://nodejs.org/en/download/package-manager/)
