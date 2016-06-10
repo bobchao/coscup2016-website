@@ -94,9 +94,13 @@ var Navbar = React.createClass({
         };
         if( resizer.windowWidth() > 1500 )
             nState.height = (resizer.windowWidth()*0.3) + 'px';
-        else if( resizer.windowWidth() > 600 ) {
+        else if( resizer.windowWidth() > 900 ) {
             nState.height = (resizer.windowWidth()*0.45) + 'px';
             nState.cName  = 'banner-rwd-1500';
+        }
+        else if( resizer.windowWidth() > 600 ) {
+            nState.height = (resizer.windowWidth()*0.5) + 'px';
+            nState.cName  = 'banner-rwd-900';   
         }
         else {
             nState.height = (resizer.windowWidth()*0.7) + 'px';
