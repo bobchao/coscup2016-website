@@ -80,18 +80,6 @@ section[role="timetable"] {
                     text-align: left;
                 }
             }
-            div.up.subject{
-                display: block;
-                @include tablet() {
-                    display: none;
-                }
-            }
-            div.down.subject{
-                display: none;
-                @include tablet() {
-                    display: block;
-                }
-            }
             div.speaker {
                 color    : rgba(143, 184, 34, 1);
 
@@ -100,7 +88,7 @@ section[role="timetable"] {
                 @include tablet() {
                     text-align: left;
                     font-size: $font_base;
-                    padding: 1em;
+                    padding: 1em 1em .5em 1em;
                 }
 
                 position: relative;
@@ -114,7 +102,7 @@ section[role="timetable"] {
                     top: 0em;
                     background-color: rgba(160, 160, 160, 1);
                     color: white;
-                   @include tablet() {
+                    @include tablet() {
                         display: inline-block;
                     }
                     @media (min-width: 900px){
@@ -124,16 +112,6 @@ section[role="timetable"] {
             }
             [role="timetable-popup-content"] {
                 display   : none;
-            }
-            div.rwd-time {
-                padding: 1em 0;
-                background-color: rgba(100, 100, 100, 1);
-                color: white;
-                
-                display: none;
-                @include tablet() {
-                    display: block;
-                }
             }
         }
         th {
@@ -305,24 +283,26 @@ section[role="timetable"] {
 }
 
 // Defined table tag style
+div.tags {
+    text-align      : center;
+    @include tablet() {
+        text-align  : left;
+        padding-left: 1em;
+    }
+}
 [role="tag"] {
     display      : inline-block;
     font-size    : $font_small;
     height       : 1.3em;
     line-height  : 1.3em;
     padding      : 0 .6em;
-    margin       : .3em .3em 0 .3em;
+    margin       : .3em .3em 0 0;
     background   : #333;
     color        : white;
     border-radius: .5em;
 
     &.tag-EN {
         background: #803232;
-    }
-
-    display: inline-block;
-    @include tablet() {
-        display: none;
     }
 }
 
