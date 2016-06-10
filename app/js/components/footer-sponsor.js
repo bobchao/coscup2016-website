@@ -68,7 +68,12 @@ var FooterSponsor = React.createClass({
             <section role="footer-sponsor">
                 {spnsCls}
 
-                <Seperator />
+                {(() => {
+                    if(spnsCls.length>0)
+                        return (<Seperator />);
+                    else
+                        return (<span />);
+                })()}
 
                 <article role="explain-sponsor">
                     <h2>贊助 COSCUP</h2>
