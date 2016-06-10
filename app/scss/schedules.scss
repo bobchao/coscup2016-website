@@ -253,9 +253,17 @@ section[role="timetable"] {
             }
             box-sizing: border-box;
             
-            width: 25%;
-            @include tablet(){
+            @media screen and (min-width: 1200px) {
+                width: 25%;
+            }
+            @media screen and (min-width: 900px) and (max-width: 1200px) {
+                width: 33.3%;
+            }
+            @media screen and (min-width: 600px) and (max-width: 900px) {
                 width: 50%;
+            }
+            @media screen and (max-width: 600px) {
+                width: 100%;
             }
 
             [role="light-box"] {
