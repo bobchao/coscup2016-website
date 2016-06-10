@@ -67,3 +67,27 @@ section[role="sponsor"] {
         }
     }
 }
+section[role="sponsor-link"] {
+    & > header {
+        font-size: $font_large;
+        display: block;
+        text-align: center;
+        padding: 1em;
+        color: $color_green_bg;
+    }
+    & > div{
+        font-size: $font_medium;
+        display: block;
+        text-align: center;
+        & > a{
+            text-decoration: none;
+            &:link{
+                color: $color_green_bg;
+            }
+            &:visited{
+                color: $color_green_bg;
+            }
+        }
+    }
+    margin: 2em;
+}
