@@ -101,6 +101,12 @@ var Main = React.createClass({
 
                 <Sponsorlist />
 
+                <section role="sponsor-link">
+                    <header> 贊助COSCUP </header>
+                    <div> 如果您欲贊助 COSCUP，請與 <a href="mailto: sponsorship@coscup.org">sponsorship@coscup.org</a> 聯絡。</div> 
+                </section>
+
+
                 <Footer />
             </div>
         );

@@ -42,6 +42,11 @@ section[role="sponsor"] {
             width: 100%;
             max-height: 20em;
         }
+        @media (max-width: 900px){
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
     }
     [role="sponsor-text"] {
         width: 69%;
@@ -54,5 +59,35 @@ section[role="sponsor"] {
         & > article {
             line-height: 1.6em;
         }
+        @media (max-width: 900px){
+            padding: 3em;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+        }
     }
+}
+section[role="sponsor-link"] {
+    & > header {
+        font-size: $font_large;
+        display: block;
+        text-align: center;
+        padding: 1em;
+        color: $color_green_bg;
+    }
+    & > div{
+        font-size: $font_medium;
+        display: block;
+        text-align: center;
+        & > a{
+            text-decoration: none;
+            &:link{
+                color: $color_green_bg;
+            }
+            &:visited{
+                color: $color_green_bg;
+            }
+        }
+    }
+    margin: 2em;
 }

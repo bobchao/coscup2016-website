@@ -71,17 +71,16 @@ var Slot = React.createClass({
                 colSpan={colSpan} rowSpan={rowSpan}
                 onClick={this.clickHandler}
                 >
-                <div className="subject up">
-                    {this.props.data.subject}
-                </div>
+
                 <div className="speaker" alt={alt}>
                     {this.props.data.speakername}
                 </div>
-                <div className="subject down">
+                <div className="subject">
                     {this.props.data.subject}
                 </div>
-
-                {tags}
+                <div className="tags">
+                    {tags}
+                </div>
                 
                 <div ref="popup-content-src">
                     <Content

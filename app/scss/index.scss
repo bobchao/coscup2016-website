@@ -33,76 +33,51 @@ main {
         position   : relative;
         line-height: 1.6em;
         padding    : 0 0 3em 0;
-        @include tablet() {
-            padding: 0;
-        }
-        
-        & + section {
-            margin-top    : 4em;
-        }
 
         article {
+            color     : #333;
             h2 {
                 font-size : $font_medium;
                 text-align: center;
                 margin    : 0 0 .5em 0;
-            }
-            p {
-                color     : #333;
+                color     : #517862;
             }
             a {
-                position  : absolute;
                 bottom    : 0;
                 font-size : $font_base;
-                word-spacing: 1em;
+                color     : rgba(255,255,255,.6);
+                word-spacing   : 1em;
+                text-decoration: none;
+                transition     : color 500ms $time_quartic;
                 &:hover {
-                    text-decoration: underline;
-                }
-                @include tablet() {
-                    position: static;
+                    color     : rgba(255,255,255,1);
                 }
             }
         }
 
         [role="left"] {
-            float         : left;
-            width         : 45%;
+            display   : block;
+            width     : 80%;
+            margin    : 0 auto;
             vertical-align: top;
-            @include tablet() {
-                float     : none;
-                display   : block;
-                width     : 80%;
-                margin    : 0 auto;
-            }
 
             a {
                 left      : 0;
-                width     : 45%;
-                @include tablet() {
-                    display: block;
-                    margin : .8em 0 0 0;
-                    width  : 100%;
-                }
+                display: block;
+                margin : .8em 0 0 0;
+                width  : 100%;
             }
         }
         [role="right"] {
-            float         : right;
-            width         : 45%;
+            display   : block;
+            width     : 80%;
+            margin    : 4em auto 0 auto;
             vertical-align: top;
-            @include tablet() {
-                float     : none;
-                display   : block;
-                width     : 80%;
-                margin    : 4em auto 0 auto;
-            }
             a {
                 right     : 0;
-                width     : 45%;
-                @include tablet() {
-                    display: block;
-                    margin : .8em 0 0 0;
-                    width  : 100%;
-                }
+                display: block;
+                margin : .8em 0 0 0;
+                width  : 100%;
             }
         }
     }

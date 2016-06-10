@@ -9,15 +9,22 @@
     background-color: rgba(0,0,0,0);
     transition: background-color 500ms $time_quartic;
 
-    &.state1 {
-        display: block;
-    }
+    &.state1,
     &.state2 {
         display: block;
     }
     &.state3 {
         display: block;
         background-color: rgba(0,0,0,.5);
+    }
+
+    @include tablet() {
+        background-color: transparent;
+        &.state1,
+        &.state2,
+        &.state3 {
+            background-color: transparent;
+        }
     }
 }
 
@@ -36,7 +43,7 @@
     transform : translate  (-50%,50%) scale(.9);
     transform : translate3d(-50%,50%,0) scale(.9);
     background: white;
-    transition: transform 500ms $time_quartic;
+    transition: transform 300ms $time_quartic;
     will-change: transform;
 
     &.state1 {
