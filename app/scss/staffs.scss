@@ -7,6 +7,9 @@ section[role="team-list"] {
 
     div[role="team"] {
         font-size: $font_base;
+        @include tablet() {
+            padding: 0 1em;
+        }
         
         h2 {
             font-size: $font_medium;
