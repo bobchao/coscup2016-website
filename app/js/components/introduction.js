@@ -23,7 +23,8 @@ var Activity  = React.createClass({
             lContent.push(<h2>{this.props.left.title}</h2>);
             lContent.push(<p dangerouslySetInnerHTML={article} />);
             lContent.push(  <a role="link-btn"
-                               href={this.props.left.url}>
+                               href={this.props.left.url}
+                               target="_blank">
                                 {this.props.left.btn}
                             </a>);
         }
@@ -32,7 +33,8 @@ var Activity  = React.createClass({
             rContent.push(<h2>{this.props.right.title}</h2>);
             rContent.push(<p dangerouslySetInnerHTML={article} />);
             rContent.push(  <a role="link-btn"
-                               href={this.props.right.url}>
+                               href={this.props.right.url}
+                               target="_blank">
                                 {this.props.right.btn}
                             </a>);
         }
