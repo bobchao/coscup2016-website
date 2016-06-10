@@ -270,11 +270,17 @@ section[role="timetable"] {
             &.active {
                 color : rgba(51, 51, 51, 1);
             }
+            box-sizing: border-box;
             
-            width: auto;
-            @include tablet() {
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                display: block;
+            }
+            @media screen and (max-width: 900px) and (min-width: 480px) {
                 width: 50%;
-                box-sizing: border-box;
+            }
+            @media screen and (min-width: 900px) {
+                width: 25%;
             }
 
             [role="light-box"] {
