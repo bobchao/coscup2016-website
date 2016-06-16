@@ -88,7 +88,7 @@ var Introduction = React.createClass({
 
                 <article role="important-info">
                     <strong>{"2016/8/20(六) - 2016/8/21(日)"}</strong>
-                    <p>{"中央研究院 人文社會科學館"}</p>
+                    <p>{"中央研究院 活動中心及人文社會科學館"}</p>
                     <p>{"Activity Center & HSSB Academia Sinica"}</p>
                 </article>
 
