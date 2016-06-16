@@ -37,5 +37,13 @@
             "en": "Staffs"
         },
         "url": "staffs.html"
-    }
+    },
+
+    {
+        "text": {
+            "zh": "最新消息",
+            "en": "News"
+        },
+        "url": "http://blog.coscup.org/"
+    },
 ]
