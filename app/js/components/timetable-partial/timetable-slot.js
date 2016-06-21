@@ -10,6 +10,9 @@ var langStore = require('stores/lang.js');
 var typeStore = require('stores/timetable-filter.js');
 var tagName   = typeStore.type;
 
+// For hashtag to determined init popup page
+var hashtag       = location.hash.substr(1);
+
 // Implement index page
 var Slot = React.createClass({
     needActive: function() {
@@ -29,6 +32,14 @@ var Slot = React.createClass({
             active: this.needActive()
         };
     },
+    hashtagProced: false,
+    hashtagChecker: function() {
+        if( this.hashtagProced || typeof this.props.data === 'undefined' )
+            return;
+        this.hashtagProced = true;
+        if( this.props.data.slot === hashtag )
+            this.clickHandler();
+    },
     clickHandler: function() {
         var dom = ReactDOM.findDOMNode(this.refs["popup-content-src"]);
         popup.show(dom.innerHTML);
@@ -42,6 +53,10 @@ var Slot = React.createClass({
     componentDidMount: function() {
         langStore.register(this.langChangeHandler);
         typeStore.filterChangeRegister(this.filterChangeHandler);
+        this.hashtagChecker();
+    },
+    componentDidUpdate: function() {
+        this.hashtagChecker();
     },
     render: function() {
         var lang    = this.state.lang;
@@ -70,6 +85,7 @@ var Slot = React.createClass({
             <td role="timetable-slot" className={cls}
                 colSpan={colSpan} rowSpan={rowSpan}
                 onClick={this.clickHandler}
+                id={this.props.data.slot}
                 >
 
                 <div className="speaker" alt={alt}>
