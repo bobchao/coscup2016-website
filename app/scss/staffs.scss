@@ -16,7 +16,8 @@ section[role="team-list"] {
             color    : $color_green_bg;
         }
         p {
-            color    : #333;
+            color     : #333;
+            text-align: justify;
         }
 
         & ~ div[role="team"] {
