@@ -16,6 +16,9 @@ section[role="transport"] {
         color      : $color_green_bg;
         font-weight: 100;
     }
+    [role="content"] {
+        text-align : justify;
+    }
 }
 
 div[role="transport-text-info"] {
